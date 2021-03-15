@@ -3,37 +3,49 @@ import requests
 import os
 import sys
 import shutil
+from os.path  import basename
+import re
 
-def getURLImg(url):
-  html_page = requests.get(url)
-  soup = BeautifulSoup(html_page.text, 'html.parser')
 
-  images = soup.findAll('img')
-  example = images[0]
 
-  url_img = example.attrs['src'] #The extension you pulled earlier
+def getURLImg():
 
-  return url_img
+    url='https://pokemondb.net/sprites'
+    html_page = requests.get(url)
+    soup = BeautifulSoup(html_page.text,features="html.parser")
+    
+    
+    images = soup.find("a", class_="infocard")
+    for image in images:
+        
+        shield_url=image.['data-src']
+        print(shield_url)
 
-def saveImg(url_Img):
+    url_img = images.attrs({"data-src"}) #The extension you pulled earlier
 
-    f = open('2.jpg','wb')
-    f.write(requests.get(url_Img).content)
-    f.close()
+    return url_img
 
+def saveImg(url_Img): 
     try:
         os.mkdir('Images2')
     except FileExistsError:
         print("fichier déjà crée")
-    shutil.move("2.jpg", "Images2" )
+    
+    f = open('Images2/2.jpg','wb')
+    f.write(requests.get(url_Img).content)
+    f.close()
+
+   
+    #shutil.move("2.jpg", "Images2" )
 
 
     
 
 ###########Main##############
 
-urlimg = getURLImg('https://commons.wikimedia.org/wiki/Main_Page')
-saveImg(urlimg)
+#urlimg = getURLImg('https://commons.wikimedia.org/wiki/Main_Page')
+
+saveImg(getURLImg())
 
 print("end")
 
