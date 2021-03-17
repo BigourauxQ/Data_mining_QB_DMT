@@ -52,4 +52,7 @@ def getURLImg():
 table = getURLImg()
 img =Image.open('Images2/blastoise.jpg')
 img.show()
+with open('DataPokemon.csv','w', newline='') as f_output:
+            csv_output = csv.writer(f_output)
+            csv_output.writerows()
 print("end")
