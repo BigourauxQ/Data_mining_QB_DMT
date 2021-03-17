@@ -27,35 +27,14 @@ import matplotlib.pyplot as plot
 
 ### Utilisateur qui 'like' tous les 'bug'
 
-Utilsateur1 = 'Bug' # il aime les types bug
 
-Image_de_donnee = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
-pokemon_name = Image_de_donnee['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
-pokemon_type = Image_de_donnee['Type'][0:50] #on prend les 50 premieres ligne de la colonne type
-
-choix_de_utilisateur1 = [] #stock  les likes et dislikes de l'utilisateur
-
-for i in pokemon_type: #like si c'est un 'bug'
-        
-        if (i == Utilsateur1):
-                choix_de_utilisateur1.append('like')
-        else:
-                choix_de_utilisateur1.append('dislike')
-
-
-dataframe_U1 = pd.DataFrame(choix_de_utilisateur1,columns=['like_and_dislike'])# création d'une dataframe avec les likes et dislikes de l'utilisateur
-dataframe_U1_2 = pd.concat([dataframe_U1 , Image_de_donnee[0:50]], axis = 1)# permet de concaténer des données
-
-dataframe_U1_4 = dataframe_U1_2.set_index('like_and_dislike')# met la colonne dislike and like index
-dataframe_U1_like = dataframe_U1_4.drop(['dislike'])#enlèe ce qui possède une colonne dislike
-
-
-
-
-
-choix_de_utilisateur_deux = []
+Data = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+pokemon_name = Data['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
+pokemon_type = Data['Type'][0:50] #on prend les 50 premieres ligne de la colonne type
+pokemon_height = Data['height'][0:50]
 
 # l'utilisateur 1 like et dislike aléatoirement, la fonction retourne la liste d'element liké
+
 def Utilisateur1():
         choix_de_utilisateur = []
 
@@ -69,23 +48,58 @@ def Utilisateur1():
                         choix_de_utilisateur.append('dislike') 
 
         dataframe_un = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])
-
-        dataframe_trois = pd.concat([dataframe_un , Image_de_donnee[0:50]], axis = 1)# permet de concaténer des données
-
+        dataframe_trois = pd.concat([dataframe_un , Data[0:50]], axis = 1)# permet de concaténer des données
         dataframe_quatre = dataframe_trois.set_index('like_and_dislike')# met la colonne dislike and like index
         dataframe_like = dataframe_quatre.drop(['dislike'])#enlève ce qui possède une colonne dislike
 
-                
         return dataframe_like
 
-dataframe_like = Utilisateur1()
+
+#l'utilisateur 2 like uniquement les types 'Bug'
+
+def Utilisateur2():
+
+        choix_de_utilisateur = [] #stock  les likes et dislikes de l'utilisateur
+
+        aime = 'Bug ' # il aime les types bug
+
+        for i in pokemon_type: #like si c'est un 'bug'
+                
+                if (i == aime):
+                        choix_de_utilisateur.append('like')
+                else:
+                        choix_de_utilisateur.append('dislike')
 
 
-# teste de corrélation 
+        dataframe = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])# création d'une dataframe avec les likes et dislikes de l'utilisateur
+        dataframe = pd.concat([dataframe , Data[0:50]], axis = 1)# permet de concaténer des données
+        dataframe = dataframe.set_index('like_and_dislike')# met la colonne dislike and like index
+        dataframe_like = dataframe.drop(['dislike'])#enlèe ce qui possède une colonne dislike
 
-tableau_de_like_U1 = dataframe_like.values.tolist()# récupéra
-tableau_des_pokemon = Image_de_donnee.values.tolist()
+        return dataframe_like
 
+#l'utilisateur 3 like uniquement les 'grands' pokémon
+
+def Utilisateur3():
+
+        choix_de_utilisateur = [] #stock  les likes et dislikes de l'utilisateur
+
+        taille_aime = 1.5
+
+        for i in pokemon_height: #like si c'est un 'bug'
+                
+                if (i > taille_aime):
+                        choix_de_utilisateur.append('like')
+                else:
+                        choix_de_utilisateur.append('dislike')
+
+
+        dataframe = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])# création d'une dataframe avec les likes et dislikes de l'utilisateur
+        dataframe = pd.concat([dataframe , Data[0:50]], axis = 1)# permet de concaténer des données
+        dataframe = dataframe.set_index('like_and_dislike')# met la colonne dislike and like index
+        dataframe_like = dataframe.drop(['dislike'])#enlèe ce qui possède une colonne dislike
+
+        return dataframe_like
 
 def recommandation(tableau_de_like):
 
@@ -106,6 +120,15 @@ def recommandation(tableau_de_like):
                 print(i)
 
         return Proposition
+
+###Main###
+
+dataframe_like = Utilisateur3() # on choisie quelle utilisateur remplira notre tableau de like and dislike
+print(dataframe_like)
+
+tableau_de_like_U1 = dataframe_like.values.tolist()# transforme le tableau pandas en list 
+tableau_des_pokemon = Data.values.tolist() 
+
 
 recommandation(tableau_de_like_U1)
 
