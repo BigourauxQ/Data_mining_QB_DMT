@@ -65,9 +65,9 @@ for i in range(n_clusters):
 
 Utilsateur1 = 'Bug' # il aime les types bug
 
-Image_de_donnee = pd.read_csv("./DataPokemon.csv")#on récupère les données sur les pokemons
+Image_de_donnee = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
 pokemon_name = Image_de_donnee['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
-pokemon_type = Image_de_donnee['Type1'][0:50] #on prend les 50 premieres ligne de la colonne type
+pokemon_type = Image_de_donnee['Type'][0:50] #on prend les 50 premieres ligne de la colonne type
 
 choix_de_utilisateur1 = [] #stock  les likes et dislikes de l'utilisateur
 
@@ -100,7 +100,7 @@ for i in pokemon_name:
         else:
                 choix_de_utilisateur.append('dislike') 
         
-        choix_de_utilisateur_deux.append(random.choice(['migon','drole','moche','cool','puissant','enorme','petit']))# rajoute une colonne de donnée de l'utilisateur
+        choix_de_utilisateur_deux.append(random.choice(['mignon','drole','moche','cool','puissant','enorme','petit']))# rajoute une colonne de donnée de l'utilisateur
 
 dataframe_un = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])
 dataframe_un_bis = pd.DataFrame(choix_de_utilisateur_deux,columns=['Mot'])
@@ -110,7 +110,36 @@ dataframe_trois = pd.concat([dataframe_un_bis_deux , Image_de_donnee[0:50]], axi
 
 dataframe_quatre = dataframe_trois.set_index('like_and_dislike')# met la colonne dislike and like index
 dataframe_like = dataframe_quatre.drop(['dislike'])#enlève ce qui possède une colonne dislike
-grouped = dataframe_trois.groupby(['Type1','like_and_dislike'])['Mot'].count()
+
+print(dataframe_like)
+
+# teste de corrélation 
+
+tableau_de_like = dataframe_like.values.tolist()# récupéra
+tableau_des_pokemon = Image_de_donnee.values.tolist()
+Aime = []
+
+# cherche des pokémons dans la grande liste ayant des caractéristiques similaires a cceux liké (taille, poids similaire, type identique)
+for i in tableau_de_like:
+        for j in tableau_des_pokemon:
+                if ((i[3] == j[2]) and ((j[3]-1)<i[4]< (j[3]+1)) and ((j[3]-50)<i[4]< (j[3]+50))):
+                        Aime.append(j)
+
+
+for i in Aime:
+        print(i)
+
+
+
+
+grouped = dataframe_trois.groupby(['Type','like_and_dislike'])['Mot'].count()
 
 groupedplot = grouped.plot(x=0,kind='bar',title="like and dislike per type ")# graphe avec  le nombre de like et de dislike par type de pokemon
-plot.show()
+
+#print(grouped)
+
+
+
+
+plot.gca().xaxis.set_tick_params(labelsize = 5) # change la taille des labels en x
+#plot.show()
