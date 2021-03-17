@@ -117,17 +117,32 @@ print(dataframe_like)
 
 tableau_de_like = dataframe_like.values.tolist()# récupéra
 tableau_des_pokemon = Image_de_donnee.values.tolist()
-Aime = []
-
-# cherche des pokémons dans la grande liste ayant des caractéristiques similaires a cceux liké (taille, poids similaire, type identique)
-for i in tableau_de_like:
-        for j in tableau_des_pokemon:
-                if ((i[3] == j[2]) and ((j[3]-1)<i[4]< (j[3]+1)) and ((j[3]-50)<i[4]< (j[3]+50))):
-                        Aime.append(j)
+Aime = [] # contient ce que l'utilisateur aime et peu aimer
 
 
-for i in Aime:
-        print(i)
+
+
+
+def recommandation():
+
+        Proposition = [] # contient uniquement les images recommandées
+
+        # cherche des pokémons dans la grande liste ayant des caractéristiques similaires a cceux liké (taille, poids similaire, type identique)
+        for i in tableau_de_like:
+                for j in tableau_des_pokemon:
+                        if ((i[3] == j[2]) and ((j[3]-0.1)<i[4]< (j[3]+0.1)) and ((j[3]-10)<i[4]< (j[3]+10))):
+                                Aime.append(j)
+
+        for i in Aime: # on enlève tous les pokémon ayant un id < à 52 car il font partie de la liste déjà liké et donc déja vue par l'utilisateur
+                if i[0] > 52:
+                        Proposition.append(i)
+
+        for i in Proposition:
+                print(i)
+        return Proposition
+
+
+recommandation()
 
 
 
