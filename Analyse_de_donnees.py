@@ -20,49 +20,97 @@ import pydotplus
 import numpy as np 
 from IPython.display import Image, display
 import pandas as pd
-
-Image_de_donnee = pd.read_csv("./pokemon.csv")
-
-print(Image_de_donnee)
-
-choix_de_utilisateur = [ #devrat être remplis par un utilisateur
-              'Favorite',
-              'NotFavorite',
-              'Favorite',
-              'Favorite',
-              'Favorite',
-              ]
+import random
+import matplotlib.pyplot as plot
 """
-#creating dataframes
-dataframe = pd.DataFrame(data, columns=['color', 'tag', 'size', 'mode'])
-resultframe = pd.DataFrame(result, columns=['favorite'])
+### code affichage des statistique d'une image
 
-#generating numerical labels
-le1 = LabelEncoder()
-dataframe['color'] = le1.fit_transform(dataframe['color'])
+from PIL import Image
+import numpy
+import math
+import matplotlib.pyplot as plot
+from sklearn.cluster import KMeans
 
-le2 = LabelEncoder()
-dataframe['tag'] = le2.fit_transform(dataframe['tag'])
+imgfile = Image.open("./images/images/wailord.png")#lit bien les .png
+#print(imgfile.size)# taille de l'image
+#print(imgfile.mode)#donne des info sur le format pixel
+#print(imgfile.format)#type d'image
 
-le3 = LabelEncoder()
-dataframe['size'] = le3.fit_transform(dataframe['size'])
+n_clusters = 5
 
-le4 = LabelEncoder()
-dataframe['mode'] = le4.fit_transform(dataframe['mode'])
+numarray = numpy.array(imgfile.getdata(), numpy.uint8)#tableau contenant les pixels de l'image sous forme de matrice
 
-le5 = LabelEncoder()
-resultframe['favorite'] = le5.fit_transform(resultframe['favorite'])
+clusters = KMeans(n_clusters)# algo de k means
 
-#Use of random forest classifier
-rfc = RandomForestClassifier(n_estimators=10, max_depth=2,
-                  random_state=0)
-rfc = rfc.fit(dataframe, resultframe.values.ravel())
+clusters.fit(numarray)
 
-#prediction
-prediction = rfc.predict([
-        [le1.transform(['red'])[0], le2.transform(['nature'])[0],
-         le3.transform(['thumbnail'])[0], le4.transform(['portrait'])[0]]])
-print(le5.inverse_transform(prediction))
-print(rfc.feature_importances_)
+npbins = numpy.arange(0, n_clusters+1)
+
+histogram = numpy.histogram(clusters.labels_, bins=npbins)
+
+labels = numpy.unique(clusters.labels_)
+
+barlist = plot.bar(labels, histogram[0])
+
+for i in range(n_clusters):
+
+    barlist[i].set_color('#%02x%02x%02x' % (
+    math.ceil(clusters.cluster_centers_[i][0]), 
+        math.ceil(clusters.cluster_centers_[i][1]),
+    math.ceil(clusters.cluster_centers_[i][2])))
 """
+#plot.show()
 
+### Utilisateur qui 'like' tous les 'bug'
+
+Utilsateur1 = 'Bug' # il aime les types bug
+
+Image_de_donnee = pd.read_csv("./pokemon.csv")#on récupère les données sur les pokemons
+pokemon_name = Image_de_donnee['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
+pokemon_type = Image_de_donnee['Type1'][0:50] #on prend les 50 premieres ligne de la colonne type
+
+choix_de_utilisateur1 = [] #stock  les likes et dislikes de l'utilisateur
+
+for i in pokemon_type: #like si c'est un 'bug'
+        
+        if (i == Utilsateur1):
+                choix_de_utilisateur1.append('like')
+        else:
+                choix_de_utilisateur1.append('dislike')
+
+
+dataframe_U1 = pd.DataFrame(choix_de_utilisateur1,columns=['like_and_dislike'])# création d'une dataframe avec les likes et dislikes de l'utilisateur
+dataframe_U1_2 = pd.concat([dataframe_U1 , Image_de_donnee[0:50]], axis = 1)# permet de concaténer des données
+
+dataframe_U1_4 = dataframe_U1_2.set_index('like_and_dislike')# met la colonne dislike and like index
+dataframe_U1_like = dataframe_U1_4.drop(['dislike'])#enlèe ce qui possède une colonne dislike
+
+
+### Utilisateur aléatoire ###
+
+choix_de_utilisateur = []
+choix_de_utilisateur_deux = []
+
+for i in pokemon_name:
+        
+        choix = random.choice([True,False])
+
+        if(choix == True):
+                choix_de_utilisateur.append('like')
+        else:
+                choix_de_utilisateur.append('dislike') 
+        
+        choix_de_utilisateur_deux.append(random.choice(['migon','drole','moche','cool','puissant','enorme','petit']))# rajoute une colonne de donnée de l'utilisateur
+
+dataframe_un = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])
+dataframe_un_bis = pd.DataFrame(choix_de_utilisateur_deux,columns=['Mot'])
+dataframe_un_bis_deux = pd.concat([dataframe_un , dataframe_un_bis], axis = 1)
+
+dataframe_trois = pd.concat([dataframe_un_bis_deux , Image_de_donnee[0:50]], axis = 1)# permet de concaténer des données
+
+dataframe_quatre = dataframe_trois.set_index('like_and_dislike')# met la colonne dislike and like index
+dataframe_like = dataframe_quatre.drop(['dislike'])#enlève ce qui possède une colonne dislike
+grouped = dataframe_trois.groupby(['Type1','like_and_dislike'])['Mot'].count()
+
+groupedplot = grouped.plot(x=0,kind='bar',title="like and dislike per type ")# graphe avec  le nombre de like et de dislike par type de pokemon
+plot.show()
