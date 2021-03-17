@@ -65,7 +65,7 @@ for i in range(n_clusters):
 
 Utilsateur1 = 'Bug' # il aime les types bug
 
-Image_de_donnee = pd.read_csv("./pokemon.csv")#on récupère les données sur les pokemons
+Image_de_donnee = pd.read_csv("./DataPokemon.csv")#on récupère les données sur les pokemons
 pokemon_name = Image_de_donnee['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
 pokemon_type = Image_de_donnee['Type1'][0:50] #on prend les 50 premieres ligne de la colonne type
 
