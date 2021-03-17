@@ -110,6 +110,7 @@ def recommandation(tableau_de_like):
         for i in tableau_de_like:
                 for j in tableau_des_pokemon:
                         if ((i[2] == j[2]) and ((j[3]-0.1)<i[3]< (j[3]+0.1)) and ((j[4]-10)<i[4]< (j[4]+10))):
+                        # if (type == type and  <height< and <poids<) 
                                 Aime.append(j)
 
         for i in Aime: # on enlève tous les pokémon ayant un id < à 52 car il font partie de la liste déjà liké et donc déja vue par l'utilisateur
