@@ -49,7 +49,7 @@ def saveImg(url_Img):
             os.mkdir('Images2')
     except FileExistsError:
             print("fichier déjà crée")
-    for i in range(0,898): 
+    for i in range(0,10): 
         f = open('Images2/'+url_Img[i]+'.jpg','wb')
         #print('https://img.pokemondb.net/artwork/large/'+url_Img[i]+'.jpg')
         f.write(requests.get('https://img.pokemondb.net/artwork/large/'+url_Img[i]+'.jpg').content)

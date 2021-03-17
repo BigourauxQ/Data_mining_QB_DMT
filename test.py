@@ -50,5 +50,6 @@ def getURLImg():
 #urlimg = getURLImg('https://commons.wikimedia.org/wiki/Main_Page')
 
 table = getURLImg()
-
+img =Image.open('Images2/blastoise.jpg')
+img.show()
 print("end")
