@@ -29,6 +29,15 @@ import matplotlib.pyplot as plot
 
 
 Data = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+Data_image = pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
+
+
+Data2 = pd.read_csv("./DataPokemon.csv", encoding = "UTF -8")#on récupère les données sur les pokemons
+Data2 =  Data2.set_index('Name')
+Data_image =  Data_image.set_index('Name')
+Data2 = pd.concat([Data2 , Data_image], axis = 1)# permet de concaténer des données
+print(Data2)
+
 pokemon_name = Data['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
 pokemon_type = Data['Type'][0:50] #on prend les 50 premieres ligne de la colonne type
 pokemon_height = Data['height'][0:50]
