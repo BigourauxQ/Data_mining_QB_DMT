@@ -33,7 +33,7 @@ for img in listdir("./Images2"):
     for i in range(0,3):
         Index.append(hist.index(max(hist)))
         hist[hist.index(max(hist))]=0.0
-    print(Index)
+    #print(Index)
 
 
 
@@ -55,9 +55,11 @@ for img in listdir("./Images2"):
         
         for i in range(0, len(couleursMoyennes)):
             if abs(round(clusters.cluster_centers_[ind][0])-couleursMoyennes[i][1][0])<64 and abs(round(clusters.cluster_centers_[ind][1])-couleursMoyennes[i][1][1])<64 and abs(round(clusters.cluster_centers_[ind][2])-couleursMoyennes[i][1][2])<64 :
-                print(couleursMoyennes[i][0])
+                #print(couleursMoyennes[i][0])
                 if couleursMoyennes[i][0] !='white':
                     couleurs.append(couleursMoyennes[i][0])
+    while len(couleurs)!=2:
+        couleurs.append('white')
                     
     rows.append([pokemon,couleurs])
     with open('DataCouleur.csv','w', newline='') as f_output:
