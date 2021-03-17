@@ -22,43 +22,7 @@ from IPython.display import Image, display
 import pandas as pd
 import random
 import matplotlib.pyplot as plot
-"""
-### code affichage des statistique d'une image
 
-from PIL import Image
-import numpy
-import math
-import matplotlib.pyplot as plot
-from sklearn.cluster import KMeans
-
-imgfile = Image.open("./images/images/wailord.png")#lit bien les .png
-#print(imgfile.size)# taille de l'image
-#print(imgfile.mode)#donne des info sur le format pixel
-#print(imgfile.format)#type d'image
-
-n_clusters = 5
-
-numarray = numpy.array(imgfile.getdata(), numpy.uint8)#tableau contenant les pixels de l'image sous forme de matrice
-
-clusters = KMeans(n_clusters)# algo de k means
-
-clusters.fit(numarray)
-
-npbins = numpy.arange(0, n_clusters+1)
-
-histogram = numpy.histogram(clusters.labels_, bins=npbins)
-
-labels = numpy.unique(clusters.labels_)
-
-barlist = plot.bar(labels, histogram[0])
-
-for i in range(n_clusters):
-
-    barlist[i].set_color('#%02x%02x%02x' % (
-    math.ceil(clusters.cluster_centers_[i][0]), 
-        math.ceil(clusters.cluster_centers_[i][1]),
-    math.ceil(clusters.cluster_centers_[i][2])))
-"""
 #plot.show()
 
 ### Utilisateur qui 'like' tous les 'bug'
@@ -86,75 +50,73 @@ dataframe_U1_4 = dataframe_U1_2.set_index('like_and_dislike')# met la colonne di
 dataframe_U1_like = dataframe_U1_4.drop(['dislike'])#enlèe ce qui possède une colonne dislike
 
 
-### Utilisateur aléatoire ###
 
-choix_de_utilisateur = []
+
+
 choix_de_utilisateur_deux = []
 
-for i in pokemon_name:
-        
-        choix = random.choice([True,False])
+# l'utilisateur 1 like et dislike aléatoirement, la fonction retourne la liste d'element liké
+def Utilisateur1():
+        choix_de_utilisateur = []
 
-        if(choix == True):
-                choix_de_utilisateur.append('like')
-        else:
-                choix_de_utilisateur.append('dislike') 
-        
-        choix_de_utilisateur_deux.append(random.choice(['mignon','drole','moche','cool','puissant','enorme','petit']))# rajoute une colonne de donnée de l'utilisateur
+        for i in pokemon_name:
+                
+                choix = random.choice([True,False])
 
-dataframe_un = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])
-dataframe_un_bis = pd.DataFrame(choix_de_utilisateur_deux,columns=['Mot'])
-dataframe_un_bis_deux = pd.concat([dataframe_un , dataframe_un_bis], axis = 1)
+                if(choix == True):
+                        choix_de_utilisateur.append('like')
+                else:
+                        choix_de_utilisateur.append('dislike') 
 
-dataframe_trois = pd.concat([dataframe_un_bis_deux , Image_de_donnee[0:50]], axis = 1)# permet de concaténer des données
+        dataframe_un = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])
 
-dataframe_quatre = dataframe_trois.set_index('like_and_dislike')# met la colonne dislike and like index
-dataframe_like = dataframe_quatre.drop(['dislike'])#enlève ce qui possède une colonne dislike
+        dataframe_trois = pd.concat([dataframe_un , Image_de_donnee[0:50]], axis = 1)# permet de concaténer des données
 
-print(dataframe_like)
+        dataframe_quatre = dataframe_trois.set_index('like_and_dislike')# met la colonne dislike and like index
+        dataframe_like = dataframe_quatre.drop(['dislike'])#enlève ce qui possède une colonne dislike
+
+                
+        return dataframe_like
+
+dataframe_like = Utilisateur1()
+
 
 # teste de corrélation 
 
-tableau_de_like = dataframe_like.values.tolist()# récupéra
+tableau_de_like_U1 = dataframe_like.values.tolist()# récupéra
 tableau_des_pokemon = Image_de_donnee.values.tolist()
-Aime = [] # contient ce que l'utilisateur aime et peu aimer
 
 
+def recommandation(tableau_de_like):
 
-
-
-def recommandation():
-
+        Aime = [] # contient ce que l'utilisateur aime et peu aimer
         Proposition = [] # contient uniquement les images recommandées
 
         # cherche des pokémons dans la grande liste ayant des caractéristiques similaires a cceux liké (taille, poids similaire, type identique)
         for i in tableau_de_like:
                 for j in tableau_des_pokemon:
-                        if ((i[3] == j[2]) and ((j[3]-0.1)<i[4]< (j[3]+0.1)) and ((j[3]-10)<i[4]< (j[3]+10))):
+                        if ((i[2] == j[2]) and ((j[3]-0.1)<i[3]< (j[3]+0.1)) and ((j[4]-10)<i[4]< (j[4]+10))):
                                 Aime.append(j)
 
         for i in Aime: # on enlève tous les pokémon ayant un id < à 52 car il font partie de la liste déjà liké et donc déja vue par l'utilisateur
                 if i[0] > 52:
                         Proposition.append(i)
 
-        for i in Proposition:
+        for i in Proposition:# affichage
                 print(i)
+
         return Proposition
 
-
-recommandation()
-
+recommandation(tableau_de_like_U1)
 
 
+"""
 
-grouped = dataframe_trois.groupby(['Type','like_and_dislike'])['Mot'].count()
-
+grouped = dataframe_trois.groupby(['Type','like_and_dislike']).count()
 groupedplot = grouped.plot(x=0,kind='bar',title="like and dislike per type ")# graphe avec  le nombre de like et de dislike par type de pokemon
 
 #print(grouped)
 
-
-
-
 plot.gca().xaxis.set_tick_params(labelsize = 5) # change la taille des labels en x
 #plot.show()
+"""
