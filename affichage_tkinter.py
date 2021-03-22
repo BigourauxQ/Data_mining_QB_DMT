@@ -8,7 +8,7 @@ window = tk.Tk()
 window.title("Pokémon Image")
 window.geometry("1080x720")
  
-image = Image.open('charizard.png')
+image = Image.open('./images/blastoise.jpg')
 # Remplace PhotoImage de Tkinter par celui de PIL
 photo = ImageTk.PhotoImage(image)
 

@@ -8,10 +8,10 @@ from sklearn.cluster import KMeans
 import csv
 
 rows = []
-rows.append(['pokemon', 'couleurs'])
-for img in listdir("./Images2"):
+rows.append(['Name', 'couleur1','couleur2'])
+for img in listdir("./images"):
     pokemon = img.split(".")[0]
-    imgfile = Image.open("Images2/"+img)
+    imgfile = Image.open("images/"+img)
     numarray = numpy.array(imgfile.getdata(), numpy.uint8)
     clusters = KMeans(n_clusters = 5)
     clusters.fit(numarray)
@@ -61,7 +61,7 @@ for img in listdir("./Images2"):
     while len(couleurs)!=2:
         couleurs.append('white')
                     
-    rows.append([pokemon,couleurs])
+    rows.append([pokemon,couleurs[0],couleurs[1]])
     with open('DataCouleur.csv','w', newline='') as f_output:
             csv_output = csv.writer(f_output)
             csv_output.writerows(rows)

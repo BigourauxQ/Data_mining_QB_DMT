@@ -8,7 +8,6 @@ from urllib.request import Request, urlopen
 from PIL import Image
 
 import requests;
-#https://img.pokemondb.net/artwork/large/ninjask.jpg
 
 def getURLImg():
 
@@ -42,31 +41,28 @@ def getURLImg():
 
 def saveImg(url_Img):
 
-    shutil.rmtree('Images2')
+    #shutil.rmtree('images')
 
 
     try:
-            os.mkdir('Images2')
+            os.mkdir('images')
     except FileExistsError:
             print("fichier déjà crée")
-    for i in range(0,100): 
-        f = open('Images2/'+url_Img[i]+'.jpg','wb')
-        #print('https://img.pokemondb.net/artwork/large/'+url_Img[i]+'.jpg')
+    for i in range(0,20): 
+        f = open('images/'+url_Img[i]+'.jpg','wb')
         f.write(requests.get('https://img.pokemondb.net/artwork/large/'+url_Img[i]+'.jpg').content)
-        im=Image.open('Images2/'+url_Img[i]+'.jpg')
-        _, ext = os.path.splitext('Images2/'+url_Img[i]+'.jpg')
+        im=Image.open('images/'+url_Img[i]+'.jpg')
+        _, ext = os.path.splitext('images/'+url_Img[i]+'.jpg')
         #print(ext)
         f.close()
 
    
-    #shutil.move("2.jpg", "Images2" )
+    
 
 
     
 
 ###########Main##############
-
-#urlimg = getURLImg('https://commons.wikimedia.org/wiki/Main_Page')
 
 saveImg(getURLImg())
 
