@@ -5,25 +5,33 @@ from pandastable import Table
 from tkinter import ttk
 from tkinter import *
 
-
+#On va afficher dans un tableau les données récoltées. On va pouvoir trier et filtrer ce tableau 
 class Window(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master = master
 
-        self.Data5 = pd.DataFrame(Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2'])
+        self.Data1 = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1") #on récupère les données sur les pokemons
+        self.Data2= pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
+        self.Data1["Pokemon Name"]=self.Data1["Name"]
+        self.Data1 =  self.Data1.set_index('Name')
+        self.Data2 =  self.Data2.set_index('Name')
+        self.Data3=pd.concat([self.Data1,self.Data2], axis=1)#On fusionne nos différents tableaux avec comme PK les noms des pokemons
+        self.Data4 = pd.DataFrame(self.Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2']) #On ne sélectionne que les colonnes qui nous intéressent à l'affichage
+
+        self.Data5 = pd.DataFrame(self.Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2'])
 
         self.frame = Frame(self.master)
         self.frame.pack(fill='both', expand=TRUE)
         
-        Tableau = Table(self.frame, dataframe=Data4)
+        Tableau = Table(self.frame, dataframe=self.Data4)
         Tableau.show()
 
         Types=["None","Normal", "Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dark","Dragon","Steel","Fairy"]
         Couleurs=['black','gray','red','maroon','yellow','olive','lime','green','aqua','teal','blue','navy','fuchsia','purple','white','soft blue','soft green','soft purple','purple-blue','green-yellow','very soft green','very soft blue','pink','orange','beige','soft pink','soft orange']
 
         
-        menu = Menu(self.master)
+        menu = Menu(self.master) #Création des menus d'option pour le tri et le filtrage
         self.master.config(menu=menu)
 
         filtrage = Menu(menu)
@@ -79,20 +87,20 @@ class Window(Frame):
 
         
 
-    def Filtre( self, param, titre):
+    def Filtre( self, param, titre): #Filtrage de la data en fonction des parametres
         
-        self.Data5 = Data4[(Data4[titre].isin([param])) ]
+        self.Data5 = self.Data4[(self.Data4[titre].isin([param])) ]
             
         self.frame.destroy()
         
-        self.frame = Frame(self.master)
+        self.frame = Frame(self.master) #On détruit puis recontruit le tableau avec les nouvelles données
         self.frame.pack(fill='both', expand=TRUE)
         Tableau = Table(self.frame, dataframe=self.Data5)
         Tableau.show()
     
-    def Reset(self):
+    def Reset(self):#Permet de revenir au tabeau d'origine.
 
-        self.Data5=Data4
+        self.Data5=self.Data4
         self.frame.destroy()
         
         self.frame = Frame(self.master)
@@ -100,7 +108,7 @@ class Window(Frame):
         Tableau = Table(self.frame, dataframe=self.Data5)
         Tableau.show()
     
-    def Tri(self, param, bool):
+    def Tri(self, param, bool): #On tri le tableau courant en fonction des parametres d'entrée
         self.Data5=self.Data5.sort_values(by=param, ascending=bool)
         self.frame.destroy()
         
@@ -110,30 +118,17 @@ class Window(Frame):
         Tableau.show()
    
         
-       
-Data1 = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1") #on récupère les données sur les pokemons
-Data2= pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
-Data1["Pokemon Name"]=Data1["Name"]
-Data1 =  Data1.set_index('Name')
-Data2 =  Data2.set_index('Name')
+def AffichageDonnees(): #Création de la fenetre tkinter
 
+    fenetre = Tk()
+    fenetre.title('Affichage des données')
+    fenetre.geometry('900x800')
+    Window(fenetre)
 
+    fenetre.mainloop()
 
-Data3=pd.concat([Data1,Data2], axis=1)
-
-
-Data4 = pd.DataFrame(Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2'])
-
-
-fenetre = Tk()
-fenetre.title('Affichage des données')
-fenetre.geometry('900x800')
-app = Window(fenetre)
-
-
-
-fenetre.mainloop()
-
+if __name__ == "__main__":
+    AffichageDonnees()
 
 
 

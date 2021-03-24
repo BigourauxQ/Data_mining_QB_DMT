@@ -1,16 +1,11 @@
 from bs4 import BeautifulSoup
-import os
-import sys
-import shutil
 from os.path  import basename
-import re
 from urllib.request import Request, urlopen
-from PIL import Image
 import csv
-import requests;
 
 
-def getURLImg():
+#On va de nouveau parcourir le tableau html à la recherche d'informations utilies sur nos pokemons
+def getData():
 
     url='https://pokemondb.net/pokedex/stats/height-weight'
     req = Request(url, headers={'User-Agent': 'XYZ/3.0'})
@@ -19,17 +14,17 @@ def getURLImg():
     codeHTML=codeHTML.decode("utf-8")
     
     
-    soup = BeautifulSoup(codeHTML)
+    soup = BeautifulSoup(codeHTML,features="lxml")
     
     
     results = soup.findAll('tr')
     rows = []
-    rows.append(['Id','Name', 'Type1','Type2', 'height', 'poids'])
-    # loop over results
+    rows.append(['Id','Name', 'Type1','Type2', 'height', 'poids']) #On va ordonner les informations qu'on poche dans un tableau 
+    # boucle sur les résultats de la recherche
     for result in results:
-        # find all columns per result
+        # On trouve toutes les colonnes
         data = result.find_all('td')
-        # check that columns have data
+        # On va récuperer les infos qui nous intéressent dans chacune des colonnes
         if len(data) == 0:
             continue
         id = data[0].getText()
@@ -44,14 +39,16 @@ def getURLImg():
         height=data[4].getText()
         poids=data[6].getText()
         #print(height)
-        if ' ' not in name and '♀' not in name and '♂' not in name and "'" not in name:
+        if ' ' not in name and '♀' not in name and '♂' not in name and "'" not in name: #De nouveau le filtrage pour les caracteres indésirables
             rows.append([id, name, type[0],type[1], height,poids])
         with open('DataPokemon.csv','w', newline='') as f_output:
-            csv_output = csv.writer(f_output)
+            csv_output = csv.writer(f_output)   #On réécrit notre tableau dans un fichier csv, ligne par ligne
             csv_output.writerows(rows)
 
 ###########Main##############
 
-
-table = getURLImg()
+def RecupData():
+    getData()
+if __name__ == "__main__":
+    RecupData()
 
