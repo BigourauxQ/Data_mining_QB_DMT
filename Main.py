@@ -5,6 +5,7 @@ import RecupImage
 import RecupData
 import CouleurDominante
 import AffichageDonnees
+import Statistiques
 
 RecupImage.RecupImage() #On charge nos images dans un fichier
 
@@ -14,3 +15,4 @@ RecupData.RecupData() #On récupere d'autres informations en parcourant la page 
 
 AffichageDonnees.AffichageDonnees() #On affiche toutes les données dans un tabelau interractif tkinter
 
+Statistiques.Statistiques() # affiche des graphs représentant les statistiques pour les différentes données de nos pokemons.

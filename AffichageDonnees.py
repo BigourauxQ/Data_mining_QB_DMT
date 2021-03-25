@@ -1,8 +1,7 @@
 import pandas as pd
-import numpy as np 
-from sklearn import *
+
 from pandastable import Table
-from tkinter import ttk
+
 from tkinter import *
 
 #On va afficher dans un tableau les données récoltées. On va pouvoir trier et filtrer ce tableau 

@@ -7,6 +7,7 @@ pandas:
 
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_values.html
 https://pandas.pydata.org/docs/user_guide/dsintro.html
+https://medium.com/france-school-of-ai/data-visualization-en-python-avec-des-librairies-telles-que-matplotlib-et-seaborn-6811385df020
 
 
 TKinter :
@@ -29,7 +30,7 @@ Beautiful Soup :
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 
-Autres :
+Autresç :
 https://stackoverflow.com/questions/6523791/why-is-python-running-my-module-when-i-import-it-and-how-do-i-stop-it
 
 
