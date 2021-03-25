@@ -10,15 +10,9 @@ class Window(Frame):
         Frame.__init__(self, master)
         self.master = master
 
-        self.Data1 = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1") #on récupère les données sur les pokemons
-        self.Data2= pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
-        self.Data1["Pokemon Name"]=self.Data1["Name"]
-        self.Data1 =  self.Data1.set_index('Name')
-        self.Data2 =  self.Data2.set_index('Name')
-        self.Data3=pd.concat([self.Data1,self.Data2], axis=1)#On fusionne nos différents tableaux avec comme PK les noms des pokemons
-        self.Data4 = pd.DataFrame(self.Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2']) #On ne sélectionne que les colonnes qui nous intéressent à l'affichage
+        self.Data4 = pd.read_csv("DataFinal.csv", encoding = "ISO-8859-1")
 
-        self.Data5 = pd.DataFrame(self.Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2'])
+        self.Data5 = pd.read_csv("DataFinal.csv", encoding = "ISO-8859-1")
 
         self.frame = Frame(self.master)
         self.frame.pack(fill='both', expand=TRUE)

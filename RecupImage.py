@@ -30,7 +30,7 @@ def getURLImg():
         if len(image) == 0:
             continue
         image=image[1].getText().lower()
-        if ' ' not in image and '♀' not in image and '♂' not in image and "'" not in image: #On nettoie une premiere fois en filtrant les pokemons avec des noms comportant des caracteres spéciaux qui pourraient poser probleme plus tard
+        if ' ' not in image and '♀' not in image and '♂' not in image and "'" not in image and "é" not in image: #On nettoie une premiere fois en filtrant les pokemons avec des noms comportant des caracteres spéciaux qui pourraient poser probleme plus tard
             #print(image)
             
             listeimg.append(image)
@@ -40,30 +40,33 @@ def getURLImg():
     return listeimg
 
 #fonction qui permet de créer un dossier(si il n'existe pas) et d'y stocker toutes les images
-def saveImg(url_Img, nbreImages):
+def saveImg(listeimg, nbreImages):
 
-    #shutil.rmtree('images') #permet de détruire automatiquement le fichier des images
+    shutil.rmtree('images') #permet de détruire automatiquement le fichier des images
 
     try:                    
             os.mkdir('images')
     except FileExistsError:
             print("fichier déjà créé")
+    if len(listeimg)<nbreImages:
+        nbreImages=len(listeimg)
     for i in range(0,nbreImages):     #on va charger sur le meme site de belles images qui correspondent aux pokemons dont on a chargé les noms
-        f = open('images/'+url_Img[i]+'.jpg','wb')
-        f.write(requests.get('https://img.pokemondb.net/artwork/large/'+url_Img[i]+'.jpg').content)
-        im=Image.open('images/'+url_Img[i]+'.jpg')
-        _, ext = os.path.splitext('images/'+url_Img[i]+'.jpg')  #On renomme correctement nos images
+        f = open('images/'+listeimg[i]+'.jpg','wb')
+        f.write(requests.get('https://img.pokemondb.net/artwork/large/'+listeimg[i]+'.jpg').content)
+        im=Image.open('images/'+listeimg[i]+'.jpg')
+        _, ext = os.path.splitext('images/'+listeimg[i]+'.jpg')  #On renomme correctement nos images
         #print(ext)
         f.close()
 
    
 ###########Main##############
-def RecupImage():
-    saveImg(getURLImg(), nbreImages=30)
+def RecupImage(nbreImages):
+    
+    saveImg(getURLImg(), nbreImages)
 
     print("end")
 if __name__ == "__main__":
-    RecupImage()
+    RecupImage(nbreImages=900)
 
 
 

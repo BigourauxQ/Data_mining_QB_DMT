@@ -8,13 +8,14 @@ pandas:
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_values.html
 https://pandas.pydata.org/docs/user_guide/dsintro.html
 https://medium.com/france-school-of-ai/data-visualization-en-python-avec-des-librairies-telles-que-matplotlib-et-seaborn-6811385df020
+https://katiekodes.com/python-pour-administrateurs-salesforce-201902/
 
 
 TKinter :
 
 https://blog.furas.pl/python-tkinter-pandastable-examples-gb.html
 https://docs.python.org/fr/3.8/library/tkinter.html?highlight=tkinter
-https://pythonbasics.org/tkinter-image/
+https://pythonbasics.org/
 https://solarianprogrammer.com/2018/04/20/python-opencv-show-image-tkinter-window/
 https://www.c-sharpcorner.com/Blogs/basics-for-displaying-image-in-tkinter-python
 https://zestedesavoir.com/forums/sujet/13594/affichage-dune-image-tkinter-python/
@@ -22,7 +23,7 @@ https://www.youtube.com/results?search_query=Tkinter+tutorial+Python+3.4%2C+crea
 https://stackoverflow.com/questions/10865116/tkinter-creating-buttons-in-for-loop-passing-command-arguments
 https://www.tutorialspoint.com/python/tk_menu.htm
 https://python.doctor/page-tkinter-interface-graphique-python-tutoriel
-https://pythonbasics.org/tkinter-menu/
+
 
 
 Beautiful Soup : 

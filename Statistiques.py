@@ -13,13 +13,8 @@ class Window(Frame):
         Frame.__init__(self, master)
         self.master = master
 
-        self.Data1 = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1") #on récupère les données sur les pokemons
-        self.Data2= pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
-        self.Data1["Pokemon Name"]=self.Data1["Name"]
-        self.Data1 =  self.Data1.set_index('Name')
-        self.Data2 =  self.Data2.set_index('Name')
-        self.Data3=pd.concat([self.Data1,self.Data2], axis=1)#On fusionne nos différents tableaux avec comme PK les noms des pokemons
-        self.Data4 = pd.DataFrame(self.Data3,  columns=['Pokemon Name','Type1', 'Type2','height','poids','couleur1','couleur2']) #On ne sélectionne que les colonnes qui nous intéressent à l'affichage
+        
+        self.Data4 = pd.read_csv("DataFinal.csv", encoding = "ISO-8859-1")
         #self.Data4=self.Data4.rename(columns={'height':'taille (en m)'})
         #self.Data4=self.Data4.sort_values(by='taille (en m)')
 
@@ -34,16 +29,16 @@ class Window(Frame):
         checkTri = Checkbutton(self.master, text='Données triées',variable=self.var, onvalue=1, offvalue=0, command=lambda:self.ChangeTri())
         checkTri.pack(padx=2, pady=2)
 
-        StatType1 = Button(self.master, text="Nombre de pokemons par Type1", command=lambda:self.PrintHist("Type1"))
+        StatType1 = Button(self.master, fg ='blue' ,width=30, height=2, text="Nombre de pokemons par Type1", command=lambda:self.PrintHist("Type1"))
         StatType1.pack(padx=10, pady=10)
 
-        StatType2 = Button(self.master, text="Nombre de pokemons par Type2", command=lambda:self.PrintHist("Type2"))
+        StatType2 = Button(self.master,fg ='purple' ,width=30, height=2, text="Nombre de pokemons par Type2", command=lambda:self.PrintHist("Type2"))
         StatType2.pack(padx=10, pady=10)
 
-        StatCouleur1 = Button(self.master, text="Nombre de pokemons par Couleur1", command=lambda:self.PrintHist("couleur1"))
+        StatCouleur1 = Button(self.master, fg ='blue' ,width=30, height=2,text="Nombre de pokemons par Couleur1", command=lambda:self.PrintHist("couleur1"))
         StatCouleur1.pack(padx=10, pady=10)
 
-        StatCouleur2 = Button(self.master, text="Nombre de pokemons par Couleur2", command=lambda:self.PrintHist("couleur2"))
+        StatCouleur2 = Button(self.master,fg ='purple' ,width=30, height=2, text="Nombre de pokemons par Couleur2", command=lambda:self.PrintHist("couleur2"))
         StatCouleur2.pack(padx=10, pady=10)
 
         # StatHeigh = Button(self.master, text="Nombre de pokemons par taille ", command=lambda:self.PrintHist("taille (en m)"))

@@ -39,7 +39,7 @@ def getData():
         height=data[4].getText()
         poids=data[6].getText()
         #print(height)
-        if ' ' not in name and '♀' not in name and '♂' not in name and "'" not in name: #De nouveau le filtrage pour les caracteres indésirables
+        if ' ' not in name and '♀' not in name and '♂' not in name and "'" not in name and "é" not in name: #De nouveau le filtrage pour les caracteres indésirables
             rows.append([id, name, type[0],type[1], height,poids])
         with open('DataPokemon.csv','w', newline='') as f_output:
             csv_output = csv.writer(f_output)   #On réécrit notre tableau dans un fichier csv, ligne par ligne

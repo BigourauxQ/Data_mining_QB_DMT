@@ -10,7 +10,7 @@ import csv
 def CouleurDominante():
     rows = [] #On crée la liste qu'on va remplire au fur et à mesure puis stocker dans un fichier csv
     rows.append(['Name', 'couleur1','couleur2'])
-    for img in listdir("./images"): #On va récuperer les images téléchargées
+    for img in listdir("images"): #On va récuperer les images téléchargées
         pokemon = img.split(".")[0]
         imgfile = Image.open("images/"+img)  #Algo Kmeans largement inspiré de celui des tps
         numarray = numpy.array(imgfile.getdata(), numpy.uint8)
@@ -59,7 +59,7 @@ def CouleurDominante():
             couleurs.append('white')
                         
         rows.append([pokemon,couleurs[0],couleurs[1]]) #On ajoute ce résultat à un tableau csv. Comme nos images ont un fond blanc , on traite spécialement cette couleur.
-        with open('DataCouleur.csv','w', newline='') as f_output:
+        with open('DataCouleurTest.csv','w', newline='') as f_output:
                 csv_output = csv.writer(f_output)
                 csv_output.writerows(rows)
 

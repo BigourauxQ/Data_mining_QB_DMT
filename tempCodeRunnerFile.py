@@ -1,1 +1,1 @@
-PIL
+pd.read_csv("DataFinal.csv", encoding = "ISO-8859-1")
