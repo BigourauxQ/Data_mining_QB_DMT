@@ -8,9 +8,12 @@ from sklearn.cluster import KMeans
 import csv
 
 def CouleurDominante():
+
     rows = [] #On crée la liste qu'on va remplire au fur et à mesure puis stocker dans un fichier csv
     rows.append(['Name', 'couleur1','couleur2'])
+
     for img in listdir("images"): #On va récuperer les images téléchargées
+
         pokemon = img.split(".")[0]
         imgfile = Image.open("images/"+img)  #Algo Kmeans largement inspiré de celui des tps
         numarray = numpy.array(imgfile.getdata(), numpy.uint8)
@@ -20,7 +23,9 @@ def CouleurDominante():
         histogram = numpy.histogram(clusters.labels_, bins=npbins)
         labels = numpy.unique(clusters.labels_)
         barlist = plot.bar(labels, histogram[0])
+
         for i in range(5):
+            
             barlist[i].set_color('#%02x%02x%02x' % (
             math.ceil(clusters.cluster_centers_[i][0]), 
                 math.ceil(clusters.cluster_centers_[i][1]),

@@ -1,74 +1,83 @@
 
+# This Python file uses the following encoding: utf-8
+
 from tkinter import *
 
 import Connexion
 import RecupImage
 import RecupData
-import CouleurDominante
+import couleurDominante
 import AffichageDonnees
 import Statistiques
 import JoinData
 
 class Window(Frame):
     def __init__(self, master=None):
+
         Frame.__init__(self, master)
         self.master = master
 
-        
-
+        #demande combien d'image doit être chargé
         etiquetteNbreImages = Label(self.master, text='Combien d\'images voulez vous charger ? :')
         etiquetteNbreImages.grid(row=0, column=0, padx=5,pady = 5)
-
         self.entreeNbreImages = Entry(self.master, width=10)
         self.entreeNbreImages.grid(row=0, column=1,padx=5, pady = 5)
         
+        #bouton de validation
         BoutonValider=Button(self.master, fg ='green' ,width=12, height=2, text="Valider", command=lambda:self.ValidDL())
         BoutonValider.grid(row=1, column=0, padx=10,pady = 10)
 
     
     def ValidDL(self):
-        NbreImages=eval(self.entreeNbreImages.get())
+
+        NbreImages=eval(self.entreeNbreImages.get())#récupère le nombre d'image demandé
+
+        RecupImage.RecupImage(NbreImages) 
+        RecupData.RecupData(NbreImages) #On recupere d'autres informations en parcourant la page web
+  
+        #CouleurDominante.CouleurDominante() 
+
+        JoinData.JoinData()# crée un tableau contenant les images que l'utilisateur va tester
         
-        RecupImage.RecupImage(NbreImages) #On charge nos images dans un fichier (le param est le nombre d'images à charger)
-        RecupData.RecupData(NbreImages) #On récupere d'autres informations en parcourant la page web 
-        #CouleurDominante.CouleurDominante() #On récupère les 2 couleurs dominantes de chaque image /!\ Algo assez lent !!!!
-        JoinData.JoinData()
-        
-        etiquetteNbreImages = Label(self.master,fg='green', text='Téléchargement terminé !!!')
+        etiquetteNbreImages = Label(self.master,fg='green', text='Telechargement termine !!!')
         etiquetteNbreImages.grid(row=1, column=1, padx=5,pady = 5)
         
 
-        BoutonAffichage=Button(self.master, fg ='blue' , height=2, text="Afficher les données", command=lambda:AffichageDonnees.AffichageDonnees())
+        BoutonAffichage=Button(self.master, fg ='blue' , height=2, text="Afficher les donnees", command=lambda:AffichageDonnees.AffichageDonnees())
         BoutonAffichage.grid(row=3, column=0, padx=10,pady = 15)
 
         BoutonStats=Button(self.master, fg ='purple' , height=2, text="Afficher les stats", command=lambda:Statistiques.Statistiques())
         BoutonStats.grid(row=3, column=1, padx=10,pady = 15, sticky='w')
 
-        BoutonAffichagePerso=Button(self.master, fg ='orange' , height=2, text="Afficher les données perso", command=lambda:AffichageDonnees.AffichageDonnees())
+        BoutonAffichagePerso=Button(self.master, fg ='orange' , height=2, text="Afficher les donnees perso", command=lambda:AffichageDonnees.AffichageDonnees())
         BoutonAffichagePerso.grid(row=2, column=1, padx=10,pady = 15)
 
-        BoutonTestPref=Button(self.master, fg ='orange' , height=2, text="Faire le test de préférences", command=lambda:self.TestPref())
+
+
+        BoutonTestPref=Button(self.master, fg ='orange' , height=2, text="Faire le test de preferences", command=lambda:self.TestPref())
         BoutonTestPref.grid(row=2, column=0, padx=10,pady = 15)
 
     
     def TestPref(self):
         #Appel de la fct de like/dislikes
-        BoutonImages=Button(self.master, fg ='blue' , height=2, text="Photos proposées par l'IA", command=lambda:self.TestPref())
+        BoutonImages=Button(self.master, fg ='blue' , height=2, text="Photos proposees par l'IA", command=lambda:self.TestPref())
         BoutonImages.grid(row=4, column=0, padx=10,pady = 15)
         
 
 
 
-def PagePrincipale(): #Création de la fenetre tkinter
+def PagePrincipale(): 
+    """Creation de la fenetre tkinter
+    """
 
     fenetre = Tk()
     fenetre.title('Page Principale')
-    
     Window(fenetre)
-
     fenetre.mainloop()
 
 if __name__ == "__main__":
-    InscriptionReussie = Connexion.Connexion()
-    if (InscriptionReussie== True):
+
+    InscriptionReussie = Connexion.Connexion()#appelle fonction Connexion
+
+    if (InscriptionReussie):
         PagePrincipale()
