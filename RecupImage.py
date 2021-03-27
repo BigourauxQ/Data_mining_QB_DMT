@@ -1,11 +1,9 @@
 from bs4 import BeautifulSoup
 import os
-import sys
-import shutil
+import shutil #pip2 install shutil
 from os.path  import basename
-import re
-from urllib.request import Request, urlopen
-from PIL import Image
+from urllib.request import Request, urlopen #pip3 install urllib3
+from PIL import Image #pip3 install pillow
 
 import requests;
 
