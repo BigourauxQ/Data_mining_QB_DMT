@@ -1,16 +1,17 @@
-Pokemon Name,Type1,Type2,height,poids,couleur1,couleur2
-bulbasaur,Grass,Poison,0.7,6.9,very soft green,gray
-ivysaur,Grass,Poison,1.0,13.0,gray,gray
-venusaur,Grass,Poison,2.0,100.0,gray,beige
-charmander,Fire,None,0.6,8.5,beige,gray
-charmeleon,Fire,None,1.1,19.0,beige,orange
-charizard,Fire,Flying,1.7,90.5,beige,teal
-squirtle,Water,None,0.5,9.0,gray,very soft blue
-wartortle,Water,None,1.0,22.5,very soft blue,purple-blue
-blastoise,Water,None,1.6,85.5,gray,gray
-caterpie,Bug,None,0.3,2.9,gray,soft orange
-metapod,Bug,None,0.7,9.9,gray,very soft green
-butterfree,Bug,Flying,1.1,32.0,gray,black
-weedle,Bug,Poison,0.3,3.2,gray,beige
-kakuna,Bug,Poison,0.6,10.0,beige,soft orange
-beedrill,Bug,Poison,1.0,29.5,beige,white
+like_and_dislike,Pokemon Name,Type1,Type2,height,poids,couleur1,couleur2
+like,bulbasaur,Grass,Poison,0.7,6.9,very soft green,gray
+like,ivysaur,Grass,Poison,1.0,13.0,gray,gray
+like,venusaur,Grass,Poison,2.0,100.0,gray,beige
+like,charmander,Fire,None,0.6,8.5,beige,gray
+dislike,charmeleon,Fire,None,1.1,19.0,beige,orange
+dislike,charizard,Fire,Flying,1.7,90.5,beige,teal
+dislike,squirtle,Water,None,0.5,9.0,gray,very soft blue
+like,wartortle,Water,None,1.0,22.5,very soft blue,purple-blue
+like,blastoise,Water,None,1.6,85.5,gray,gray
+like,caterpie,Bug,None,0.3,2.9,gray,soft orange
+like,metapod,Bug,None,0.7,9.9,gray,very soft green
+like,butterfree,Bug,Flying,1.1,32.0,gray,black
+like,weedle,Bug,Poison,0.3,3.2,gray,beige
+dislike,kakuna,Bug,Poison,0.6,10.0,beige,soft orange
+dislike,beedrill,Bug,Poison,1.0,29.5,beige,white
+dislike,,,,,,,
