@@ -40,7 +40,7 @@ def ImagePropose():
                 
                 name = pokemon_name[i]
                 i+=1
-                image = Image.open('./Images2/'+name+'.jpg')
+                image = Image.open('./images/'+name+'.jpg')
                 image2 =image.resize((int(image.width/1.5),int(image.height/1.5)))
 
                 # Remplace PhotoImage de Tkinter par celui de PIL
@@ -59,8 +59,9 @@ def ImagePropose():
 
     Analyse_de_donnees.Analyse_de_donnees()#genere le fichier csv contenant les recommendation pour l'utilisateur
 
-    Data = pd.read_csv("./Selection_pour_utilisateur.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
-    pokemon_name = Data['Pokemon Name'][:] 
+    pokemon_name = pd.read_csv("./Data_recommander_pour_utilisateur.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+    pokemon_name = pokemon_name['pokemon_selection']
+    print(pokemon_name)
 
 
     #variable utiliser pour balayer les différentes images
@@ -73,7 +74,7 @@ def ImagePropose():
     fenetre.title("Pokémon")
     fenetre.geometry("1080x720")
     
-    image = Image.open('./Images2/'+pokemon_name[i]+'.jpg')
+    image = Image.open('./images/'+pokemon_name[i]+'.jpg')
 
     i+=1
 

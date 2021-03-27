@@ -123,7 +123,7 @@ def Analyse_de_donnees():
         Data = Data.set_index('like_and_dislike')# met la colonne dislike and like index
         Data = Data.drop(['dislike'])#enlèe ce qui possède une colonne dislike
         Data = Data.values.tolist()# transforme le tableau pandas en list
-        print(Data)
+        
         tableau_des_pokemon = pd.read_csv("./DataTotal.csv", encoding = "ISO-8859-1")
         tableau_des_pokemon = tableau_des_pokemon.values.tolist()
         
@@ -133,15 +133,15 @@ def Analyse_de_donnees():
         # cherche des pokémons dans la grande liste ayant des caractéristiques similaires a cceux liké (taille, poids similaire, type identique)
         for i in Data:
                 for j in tableau_des_pokemon:
-                        if ((i[1] == j[1]) and ((j[3]-1)<i[3]< (j[3]+1)) and ((j[4]-30)<i[4]< (j[4]+30)) and (i[5] == i[5])):
+                        if ((i[1] == j[1])and ((j[3]-1)<i[3]< (j[3]+1)) and ((j[4]-30)<i[4]< (j[4]+30))):
                         # if (type == type and  <height< and <poids< and couleur == couleur) 
                                 Aime.append(j)
-
-        for i in range(len(Data)): # on enlève tous les premier pokémon de la liste car ce sont ceux tester par l'utilisateur
+                                
+        for i in range(len(Aime) ): # on enlève tous les premier pokémon de la liste car ce sont ceux tester par l'utilisateur
                 if i > len(Data):
-                        Proposition.append(i)
+                        Proposition.append(Aime[i][0])
 
-
+   
         dataframe_proposition = pd.DataFrame(Proposition,columns=['pokemon_selection'])# création dataframe contenant les propositions pour l'utilisateur
         dataframe_proposition.to_csv('Data_recommander_pour_utilisateur.csv', index=False)   #On écrit tout ca dans un nouveau CSV
         
