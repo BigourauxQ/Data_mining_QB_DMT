@@ -44,13 +44,17 @@ class Window(Frame):
         BoutonStats=Button(self.master, fg ='purple' , height=2, text="Afficher les stats", command=lambda:Statistiques.Statistiques())
         BoutonStats.grid(row=3, column=1, padx=10,pady = 15, sticky='w')
 
-        BoutonAffichage=Button(self.master, fg ='orange' , height=2, text="Afficher les données perso", command=lambda:AffichageDonnees.AffichageDonnees())
-        BoutonAffichage.grid(row=2, column=0, padx=10,pady = 15)
+        BoutonAffichagePerso=Button(self.master, fg ='orange' , height=2, text="Afficher les données perso", command=lambda:AffichageDonnees.AffichageDonnees())
+        BoutonAffichagePerso.grid(row=2, column=1, padx=10,pady = 15)
 
-        BoutonAffichage=Button(self.master, fg ='orange' , height=2, text="Faire le test de préférences", command=lambda:AffichageDonnees.AffichageDonnees())
-        BoutonAffichage.grid(row=2, column=0, padx=10,pady = 15)
+        BoutonTestPref=Button(self.master, fg ='orange' , height=2, text="Faire le test de préférences", command=lambda:self.TestPref())
+        BoutonTestPref.grid(row=2, column=0, padx=10,pady = 15)
 
-
+    
+    def TestPref(self):
+        #Appel de la fct de like/dislikes
+        BoutonImages=Button(self.master, fg ='blue' , height=2, text="Photos proposées par l'IA", command=lambda:self.TestPref())
+        BoutonImages.grid(row=4, column=0, padx=10,pady = 15)
         
 
 
