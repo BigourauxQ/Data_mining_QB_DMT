@@ -8,9 +8,11 @@ import AffichageDonnees
 import Statistiques
 import JoinData
 
-RecupImage.RecupImage() #On charge nos images dans un fichier
+NbreImages = 30 #Nbre d'images à charger
 
-RecupData.RecupData() #On récupere d'autres informations en parcourant la page web 
+RecupImage.RecupImage(NbreImages) #On charge nos images dans un fichier (le param est le nombre d'images à charger)
+
+RecupData.RecupData(NbreImages) #On récupere d'autres informations en parcourant la page web 
 
 #CouleurDominante.CouleurDominante() #On récupère les 2 couleurs dominantes de chaque image /!\ Algo assez lent !!!!
 

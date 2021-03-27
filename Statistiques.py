@@ -1,5 +1,5 @@
 import pandas as pd
-import csv
+
 import numpy as np
 import matplotlib.pyplot as plot
 import seaborn as sns
@@ -41,6 +41,12 @@ class Window(Frame):
         StatCouleur2 = Button(self.master,fg ='purple' ,width=30, height=2, text="Nombre de pokemons par Couleur2", command=lambda:self.PrintHist("couleur2"))
         StatCouleur2.pack(padx=10, pady=10)
 
+        StatGroupPoids = Button(self.master,fg ='blue' ,width=30, height=2, text="Poids moyen des pokemons par type", command=lambda:self.PrintHistGrouped("poids"))
+        StatGroupPoids.pack(padx=10, pady=10)
+
+        StatGroupTaille = Button(self.master,fg ='purple' ,width=30, height=2, text="Taille moyenne des pokemons par type", command=lambda:self.PrintHistGrouped("height"))
+        StatGroupTaille.pack(padx=10, pady=10)
+
         # StatHeigh = Button(self.master, text="Nombre de pokemons par taille ", command=lambda:self.PrintHist("taille (en m)"))
         # StatHeigh.pack(padx=10, pady=10)
 
@@ -49,6 +55,15 @@ class Window(Frame):
         
         plot.clf()
         self.Data4[param].value_counts(normalize=False, sort=self.tri).plot(kind=self.modeAffichage, title="Nombre de pokemons par "+param)
+        plot.show()
+
+    def PrintHistGrouped(self, param):
+        
+        plot.close() #probleme avec clr pour cette fct
+        self.Data5=self.Data4[["Type1",param]].groupby("Type1").mean()
+        
+        self.Data5.plot(kind='bar', title= param+" moyen des pokemons par type")#pas pertinent de mettre un affichage "pie" pour ces stats
+        
         plot.show()
 
     def ChangeMode(self):
@@ -68,7 +83,7 @@ def Statistiques(): #Création de la fenetre tkinter
 
     fenetre = Tk()
     fenetre.title('Affichage des données statistiques')
-    fenetre.geometry('300x300')
+    fenetre.geometry('300x450')
     Window(fenetre)
 
     fenetre.mainloop()

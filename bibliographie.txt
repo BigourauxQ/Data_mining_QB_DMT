@@ -31,7 +31,7 @@ Beautiful Soup :
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 
-Autresç :
+Autres :
 https://stackoverflow.com/questions/6523791/why-is-python-running-my-module-when-i-import-it-and-how-do-i-stop-it
-
+https://thispointer.com/python-read-a-csv-file-line-by-line-with-or-without-header/
 

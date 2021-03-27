@@ -66,7 +66,7 @@ def RecupImage(nbreImages):
 
     print("end")
 if __name__ == "__main__":
-    RecupImage(nbreImages=900)
+    RecupImage(nbreImages=10)
 
 
 
