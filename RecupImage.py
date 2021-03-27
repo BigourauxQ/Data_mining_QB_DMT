@@ -33,7 +33,7 @@ def getURLImg():
         if len(image) == 0:
             continue
         image=image[1].getText().lower()
-        if ' ' not in image and '♀' not in image and '♂' not in image and "'" not in image and "e" not in image: #On nettoie une premiere fois en filtrant les pokemons avec des noms comportant des caracteres speciaux qui pourraient poser probleme plus tard
+        if ' ' not in image and '♀' not in image and '♂' not in image and "'" not in image and "é" not in image: #On nettoie une premiere fois en filtrant les pokemons avec des noms comportant des caracteres speciaux qui pourraient poser probleme plus tard
             #print(image)
             
             listeimg.append(image)

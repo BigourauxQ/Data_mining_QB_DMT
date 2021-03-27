@@ -1,0 +1,857 @@
+Pokemon Name,Type1,Type2,height,poids,couleur1,couleur2
+bulbasaur,Grass,Poison,0.7,6.9,very soft green,gray
+ivysaur,Grass,Poison,1.0,13.0,gray,gray
+venusaur,Grass,Poison,2.0,100.0,gray,beige
+charmander,Fire,None,0.6,8.5,beige,gray
+charmeleon,Fire,None,1.1,19.0,beige,orange
+charizard,Fire,Flying,1.7,90.5,beige,teal
+squirtle,Water,None,0.5,9.0,gray,very soft blue
+wartortle,Water,None,1.0,22.5,very soft blue,purple-blue
+blastoise,Water,None,1.6,85.5,gray,gray
+caterpie,Bug,None,0.3,2.9,gray,soft orange
+metapod,Bug,None,0.7,9.9,gray,very soft green
+butterfree,Bug,Flying,1.1,32.0,gray,black
+weedle,Bug,Poison,0.3,3.2,gray,beige
+kakuna,Bug,Poison,0.6,10.0,beige,soft orange
+beedrill,Bug,Poison,1.0,29.5,beige,white
+pidgey,Normal,Flying,0.3,1.8,beige,olive
+pidgeotto,Normal,Flying,1.1,30.0,beige,soft orange
+pidgeot,Normal,Flying,1.5,39.5,soft orange,gray
+rattata,Normal,None,0.3,3.5,gray,gray
+raticate,Normal,None,0.7,18.5,olive,beige
+spearow,Normal,Flying,0.3,2.0,gray,soft orange
+fearow,Normal,Flying,1.2,38.0,beige,soft orange
+ekans,Poison,None,2.0,6.9,gray,soft pink
+arbok,Poison,None,3.5,65.0,gray,purple-blue
+pikachu,Electric,None,0.4,6.0,soft orange,beige
+raichu,Electric,None,0.8,30.0,soft orange,beige
+sandshrew,Ground,None,0.6,12.0,gray,soft orange
+sandslash,Ground,None,1.0,29.5,olive,soft orange
+nidorina,Poison,None,0.8,20.0,purple-blue,white
+nidoqueen,Poison,Ground,1.3,60.0,gray,soft orange
+nidorino,Poison,None,0.9,19.5,gray,soft pink
+nidoking,Poison,Ground,1.4,62.0,gray,gray
+clefairy,Fairy,None,0.6,7.5,beige,white
+clefable,Fairy,None,1.3,40.0,beige,white
+vulpix,Fire,None,0.6,9.9,beige,orange
+ninetales,Fire,None,1.1,19.9,soft orange,soft orange
+jigglypuff,Normal,Fairy,0.5,5.5,beige,white
+wigglytuff,Normal,Fairy,1.0,12.0,beige,white
+zubat,Poison,Flying,0.8,7.5,soft pink,gray
+golbat,Poison,Flying,1.6,55.0,gray,black
+oddish,Grass,Poison,0.5,5.4,green,gray
+gloom,Grass,Poison,0.8,8.6,olive,gray
+vileplume,Grass,Poison,1.2,18.6,beige,beige
+paras,Bug,Grass,0.3,5.4,beige,beige
+parasect,Bug,Grass,1.0,29.5,beige,beige
+venonat,Bug,Poison,1.0,30.0,gray,gray
+venomoth,Bug,Poison,1.5,12.5,gray,white
+diglett,Ground,None,0.2,0.8,gray,gray
+dugtrio,Ground,None,0.7,33.3,gray,gray
+meowth,Normal,None,0.4,4.2,beige,white
+persian,Normal,None,1.0,32.0,soft orange,soft orange
+psyduck,Water,None,0.8,19.6,soft orange,soft orange
+golduck,Water,None,1.7,76.6,gray,purple-blue
+mankey,Fighting,None,0.5,28.0,beige,white
+primeape,Fighting,None,1.0,32.0,beige,gray
+growlithe,Fire,None,0.7,19.0,soft orange,beige
+arcanine,Fire,None,1.9,155.0,soft orange,beige
+poliwag,Water,None,0.6,12.4,gray,white
+poliwhirl,Water,None,1.0,20.0,gray,very soft blue
+poliwrath,Water,Fighting,1.3,54.0,gray,white
+abra,Psychic,None,0.9,19.5,yellow,olive
+kadabra,Psychic,None,1.3,56.5,yellow,olive
+alakazam,Psychic,None,1.5,48.0,beige,gray
+machop,Fighting,None,0.8,19.5,very soft blue,gray
+machoke,Fighting,None,1.5,70.5,purple-blue,gray
+machamp,Fighting,None,1.6,130.0,very soft blue,gray
+bellsprout,Grass,Poison,0.7,4.0,very soft green,soft orange
+weepinbell,Grass,Poison,1.0,6.4,gray,soft orange
+victreebel,Grass,Poison,1.7,15.5,very soft green,soft orange
+tentacool,Water,Poison,0.9,45.5,very soft blue,black
+tentacruel,Water,Poison,1.6,55.0,gray,purple-blue
+geodude,Rock,Ground,0.4,20.0,gray,gray
+graveler,Rock,Ground,1.0,105.0,soft orange,gray
+golem,Rock,Ground,1.4,300.0,gray,gray
+ponyta,Fire,None,1.0,30.0,white,white
+rapidash,Fire,None,1.7,95.0,beige,white
+slowpoke,Water,Psychic,1.2,36.0,beige,beige
+slowbro,Water,Psychic,1.6,78.5,beige,white
+magnemite,Electric,Steel,0.3,6.0,very soft blue,gray
+magneton,Electric,Steel,1.0,60.0,gray,very soft blue
+doduo,Normal,Flying,1.4,39.2,gray,beige
+dodrio,Normal,Flying,1.8,85.2,beige,gray
+seel,Water,None,1.1,90.0,beige,white
+dewgong,Water,Ice,1.7,120.0,white,white
+grimer,Poison,None,0.9,30.0,gray,soft pink
+muk,Poison,None,1.2,30.0,gray,gray
+shellder,Water,None,0.3,4.0,purple-blue,gray
+cloyster,Water,Ice,1.5,132.5,gray,purple-blue
+gastly,Ghost,Poison,1.3,0.1,gray,black
+haunter,Ghost,Poison,1.6,0.1,gray,gray
+gengar,Ghost,Poison,1.5,40.5,gray,white
+onix,Rock,Ground,8.8,210.0,gray,navy
+drowzee,Psychic,None,1.0,32.4,gray,yellow
+hypno,Psychic,None,1.6,75.6,soft orange,beige
+krabby,Water,None,0.4,6.5,beige,beige
+kingler,Water,None,1.3,60.0,beige,beige
+voltorb,Electric,None,0.5,10.4,beige,very soft blue
+electrode,Electric,None,1.2,66.6,very soft blue,gray
+exeggcute,Grass,Psychic,0.4,2.5,white,white
+exeggutor,Grass,Psychic,2.0,120.0,gray,gray
+cubone,Ground,None,0.4,6.5,beige,white
+marowak,Ground,None,1.0,45.0,beige,white
+hitmonlee,Fighting,None,1.5,49.8,gray,soft orange
+hitmonchan,Fighting,None,1.4,50.2,beige,gray
+lickitung,Normal,None,1.2,65.5,beige,white
+koffing,Poison,None,0.6,1.0,soft orange,gray
+weezing,Poison,None,1.2,9.5,gray,purple-blue
+rhyhorn,Ground,Rock,1.0,115.0,gray,gray
+rhydon,Ground,Rock,1.9,120.0,gray,gray
+chansey,Normal,None,1.1,34.6,beige,white
+tangela,Grass,None,1.0,35.0,gray,black
+kangaskhan,Normal,None,2.2,80.0,gray,soft orange
+horsea,Water,None,0.4,8.0,very soft blue,purple-blue
+seadra,Water,None,1.2,25.0,very soft blue,purple-blue
+goldeen,Water,None,0.6,15.0,soft pink,white
+seaking,Water,None,1.3,39.0,black,white
+staryu,Water,None,0.8,34.5,gray,gray
+starmie,Water,Psychic,1.1,80.0,purple-blue,gray
+scyther,Bug,Flying,1.5,56.0,very soft green,white
+jynx,Ice,Psychic,1.4,40.6,beige,soft orange
+electabuzz,Electric,None,1.1,30.0,soft orange,black
+magmar,Fire,None,1.3,44.5,beige,beige
+pinsir,Bug,None,1.5,55.0,gray,gray
+tauros,Normal,None,1.4,88.4,beige,gray
+magikarp,Water,None,0.9,10.0,gray,beige
+gyarados,Water,Flying,6.5,235.0,gray,gray
+lapras,Water,Ice,2.5,220.0,gray,purple-blue
+ditto,Normal,None,0.3,4.0,soft pink,gray
+eevee,Normal,None,0.3,6.5,gray,soft orange
+vaporeon,Water,None,1.0,29.0,very soft blue,soft orange
+jolteon,Electric,None,0.8,24.5,soft orange,beige
+flareon,Fire,None,0.9,25.0,beige,beige
+porygon,Normal,None,0.8,36.5,gray,white
+omanyte,Rock,Water,0.4,7.5,gray,white
+omastar,Rock,Water,1.0,35.0,soft orange,gray
+kabuto,Rock,Water,0.5,11.5,gray,black
+kabutops,Rock,Water,1.3,40.5,gray,gray
+aerodactyl,Rock,Flying,1.8,59.0,gray,gray
+snorlax,Normal,None,2.1,460.0,gray,white
+articuno,Ice,Flying,1.7,55.4,very soft blue,gray
+zapdos,Electric,Flying,1.6,52.6,beige,soft orange
+moltres,Fire,Flying,2.0,60.0,beige,soft orange
+dratini,Dragon,None,1.8,3.3,purple-blue,white
+dragonair,Dragon,None,4.0,16.5,purple-blue,white
+dragonite,Dragon,Flying,2.2,210.0,beige,gray
+mewtwo,Psychic,None,2.0,122.0,gray,white
+mew,Psychic,None,0.4,4.0,gray,white
+chikorita,Grass,None,0.9,6.4,gray,soft orange
+bayleef,Grass,None,1.2,15.8,beige,soft orange
+meganium,Grass,None,1.8,100.5,soft orange,beige
+cyndaquil,Fire,None,0.5,7.9,beige,soft orange
+quilava,Fire,None,0.9,19.0,soft orange,gray
+typhlosion,Fire,None,1.7,79.5,beige,soft orange
+totodile,Water,None,0.6,9.5,gray,very soft blue
+croconaw,Water,None,1.1,25.0,gray,beige
+feraligatr,Water,None,2.3,88.8,very soft blue,gray
+sentret,Normal,None,0.8,6.0,gray,gray
+furret,Normal,None,1.8,32.5,soft orange,gray
+hoothoot,Normal,Flying,0.7,21.2,soft orange,beige
+noctowl,Normal,Flying,1.6,40.8,gray,olive
+ledyba,Bug,Flying,1.0,10.8,soft orange,black
+ledian,Bug,Flying,1.4,35.6,gray,soft orange
+spinarak,Bug,Poison,0.5,8.5,soft orange,gray
+ariados,Bug,Poison,1.1,33.5,gray,black
+crobat,Poison,Flying,1.8,75.0,gray,gray
+chinchou,Water,Electric,0.5,12.0,gray,soft orange
+lanturn,Water,Electric,1.2,22.5,gray,purple-blue
+pichu,Electric,None,0.3,2.0,soft orange,black
+cleffa,Fairy,None,0.3,3.0,beige,white
+igglybuff,Normal,Fairy,0.3,1.0,beige,white
+togepi,Fairy,None,0.3,1.5,black,white
+togetic,Fairy,Flying,0.6,3.2,soft orange,white
+natu,Psychic,Flying,0.2,2.0,olive,soft orange
+xatu,Psychic,Flying,1.5,15.0,gray,beige
+mareep,Electric,None,0.6,7.8,beige,white
+flaaffy,Electric,None,0.8,13.3,beige,very soft blue
+ampharos,Electric,None,1.4,61.5,soft orange,gray
+bellossom,Grass,None,0.4,5.8,soft orange,gray
+marill,Water,Fairy,0.4,8.5,purple-blue,very soft blue
+azumarill,Water,Fairy,0.8,28.5,purple-blue,white
+sudowoodo,Rock,None,1.2,38.0,gray,gray
+politoed,Water,None,1.1,33.9,very soft green,soft orange
+hoppip,Grass,Flying,0.4,0.5,beige,very soft green
+skiploom,Grass,Flying,0.6,1.0,very soft green,olive
+jumpluff,Grass,Flying,0.8,3.0,gray,white
+aipom,Normal,None,0.8,11.5,soft orange,gray
+sunkern,Grass,None,0.3,1.8,soft orange,gray
+sunflora,Grass,None,0.8,8.5,soft orange,gray
+yanma,Bug,Flying,1.2,38.0,orange,gray
+wooper,Water,Ground,0.4,8.5,very soft blue,gray
+quagsire,Water,Ground,1.4,75.0,gray,very soft blue
+espeon,Psychic,None,0.9,26.5,soft pink,gray
+umbreon,Dark,None,1.0,27.0,gray,white
+murkrow,Dark,Flying,0.5,2.1,navy,teal
+slowking,Water,Psychic,2.0,79.5,beige,beige
+misdreavus,Ghost,None,0.7,1.0,teal,gray
+unown,Psychic,None,0.5,5.0,gray,navy
+wobbuffet,Psychic,None,1.3,28.5,purple-blue,gray
+girafarig,Normal,Psychic,1.5,41.5,black,orange
+pineco,Bug,None,0.6,7.2,teal,black
+forretress,Bug,Steel,1.2,125.8,gray,white
+dunsparce,Normal,None,1.5,14.0,soft orange,gray
+gligar,Ground,Flying,1.1,64.8,beige,gray
+steelix,Steel,Ground,9.2,400.0,gray,gray
+snubbull,Fairy,None,0.6,7.8,beige,beige
+granbull,Fairy,None,1.4,48.7,gray,white
+qwilfish,Water,Poison,0.5,3.9,gray,gray
+scizor,Bug,Steel,1.8,118.0,gray,beige
+shuckle,Bug,Rock,0.6,20.5,soft orange,beige
+heracross,Bug,Fighting,1.5,54.0,gray,teal
+sneasel,Dark,Ice,0.9,28.0,gray,beige
+teddiursa,Normal,None,0.6,8.8,beige,gray
+ursaring,Normal,None,1.8,125.8,gray,gray
+slugma,Fire,None,0.7,35.0,beige,beige
+magcargo,Fire,Rock,0.8,55.0,beige,gray
+swinub,Ice,Ground,0.4,6.5,beige,gray
+piloswine,Ice,Ground,1.1,55.8,gray,gray
+corsola,Water,Rock,0.6,5.0,beige,beige
+remoraid,Water,None,0.6,12.0,gray,white
+octillery,Water,None,0.9,28.5,beige,olive
+delibird,Ice,Flying,0.9,16.0,beige,white
+mantine,Water,Flying,2.1,220.0,beige,gray
+skarmory,Steel,Flying,1.7,50.5,gray,white
+houndour,Dark,Fire,0.6,10.8,gray,beige
+houndoom,Dark,Fire,1.4,35.0,gray,white
+kingdra,Water,Dragon,1.8,152.0,gray,purple-blue
+phanpy,Ground,None,0.5,33.5,very soft blue,gray
+donphan,Ground,None,1.1,120.0,gray,white
+porygon2,Normal,None,0.6,32.5,beige,purple-blue
+stantler,Normal,None,1.4,71.2,beige,gray
+smeargle,Normal,None,1.2,58.0,beige,white
+tyrogue,Fighting,None,0.7,21.0,olive,white
+hitmontop,Fighting,None,1.4,48.0,gray,beige
+smoochum,Ice,Psychic,0.4,6.0,soft orange,gray
+elekid,Electric,None,0.6,23.5,soft orange,beige
+magby,Fire,None,0.7,21.4,beige,gray
+miltank,Normal,None,1.2,75.5,beige,white
+blissey,Normal,None,1.5,46.8,soft pink,very soft green
+raikou,Electric,None,1.9,178.0,soft orange,gray
+entei,Fire,None,2.1,198.0,olive,gray
+suicune,Water,None,2.0,187.0,gray,gray
+larvitar,Rock,Ground,0.6,72.0,gray,very soft green
+pupitar,Rock,Ground,1.2,152.0,purple-blue,gray
+tyranitar,Rock,Dark,2.0,202.0,gray,gray
+lugia,Psychic,Flying,5.2,216.0,purple-blue,gray
+ho-oh,Fire,Flying,3.8,199.0,red,orange
+celebi,Psychic,Grass,0.6,5.0,gray,white
+treecko,Grass,None,0.5,5.0,soft orange,gray
+grovyle,Grass,None,0.9,21.6,gray,very soft green
+sceptile,Grass,None,1.7,52.2,very soft green,gray
+torchic,Fire,None,0.4,2.5,beige,soft orange
+combusken,Fire,Fighting,0.9,19.5,soft orange,beige
+blaziken,Fire,Fighting,1.9,52.0,beige,soft orange
+mudkip,Water,None,0.4,7.6,purple-blue,white
+marshtomp,Water,Ground,0.7,28.0,very soft blue,gray
+swampert,Water,Ground,1.5,81.9,purple-blue,gray
+poochyena,Dark,None,0.5,13.6,gray,white
+mightyena,Dark,None,1.0,37.0,black,white
+zigzagoon,Normal,None,0.4,17.5,gray,gray
+linoone,Normal,None,0.5,32.5,soft orange,white
+wurmple,Bug,None,0.3,3.6,soft orange,beige
+silcoon,Bug,None,0.6,10.0,black,white
+beautifly,Bug,Flying,1.0,28.4,gray,beige
+cascoon,Bug,None,0.7,11.5,soft pink,white
+dustox,Bug,Poison,1.2,31.6,gray,beige
+lotad,Water,Grass,0.5,2.6,gray,gray
+lombre,Water,Grass,1.2,32.5,olive,very soft blue
+ludicolo,Water,Grass,1.5,55.0,very soft green,soft orange
+seedot,Grass,None,0.5,4.0,gray,gray
+nuzleaf,Grass,Dark,1.0,28.0,gray,gray
+shiftry,Grass,Dark,1.3,59.6,gray,white
+taillow,Normal,Flying,0.3,2.3,teal,gray
+swellow,Normal,Flying,0.7,19.8,gray,gray
+wingull,Water,Flying,0.6,9.5,very soft blue,black
+pelipper,Water,Flying,1.2,28.0,soft orange,purple-blue
+ralts,Psychic,Fairy,0.4,6.6,gray,very soft green
+kirlia,Psychic,Fairy,0.8,20.2,very soft green,gray
+gardevoir,Psychic,Fairy,1.6,48.4,very soft green,gray
+surskit,Bug,Water,0.5,1.7,very soft blue,soft orange
+masquerain,Bug,Flying,0.8,3.6,beige,white
+shroomish,Grass,None,0.4,4.5,soft orange,gray
+breloom,Grass,Fighting,1.2,39.2,gray,soft orange
+slakoth,Normal,None,0.8,24.0,beige,white
+vigoroth,Normal,None,1.4,46.5,gray,white
+slaking,Normal,None,2.0,130.5,gray,gray
+nincada,Bug,Ground,0.5,5.5,gray,white
+ninjask,Bug,Flying,0.8,12.0,black,soft orange
+shedinja,Bug,Ghost,0.8,1.2,gray,soft orange
+whismur,Normal,None,0.6,16.3,soft orange,white
+loudred,Normal,None,1.0,40.5,gray,soft orange
+exploud,Normal,None,1.5,84.0,purple-blue,gray
+makuhita,Fighting,None,1.0,86.4,soft orange,gray
+hariyama,Fighting,None,2.3,253.8,soft orange,gray
+azurill,Normal,Fairy,0.2,2.0,purple-blue,teal
+nosepass,Rock,None,1.0,97.0,gray,gray
+skitty,Normal,None,0.6,11.0,beige,white
+delcatty,Normal,None,1.1,32.6,gray,soft orange
+sableye,Dark,Ghost,0.5,11.0,gray,gray
+mawile,Steel,Fairy,0.6,11.5,gray,soft orange
+aron,Steel,Rock,0.4,60.0,black,white
+lairon,Steel,Rock,0.9,120.0,gray,white
+aggron,Steel,Rock,2.1,360.0,gray,gray
+meditite,Fighting,Psychic,0.6,11.2,very soft blue,white
+medicham,Fighting,Psychic,1.3,31.5,beige,white
+electrike,Electric,None,0.6,15.2,very soft green,gray
+manectric,Electric,None,1.5,40.2,soft orange,purple-blue
+plusle,Electric,None,0.4,4.2,soft orange,gray
+minun,Electric,None,0.4,4.2,soft orange,purple-blue
+volbeat,Bug,None,0.7,17.7,purple-blue,white
+illumise,Bug,None,0.6,17.7,purple-blue,gray
+roselia,Grass,Poison,0.3,2.0,gray,beige
+gulpin,Poison,None,0.4,10.3,very soft green,gray
+swalot,Poison,None,1.7,80.0,gray,gray
+carvanha,Water,Dark,0.8,20.8,soft orange,gray
+sharpedo,Water,Dark,1.8,88.8,teal,white
+wailmer,Water,None,2.0,130.0,soft orange,teal
+wailord,Water,None,14.5,398.0,soft orange,teal
+numel,Fire,Ground,0.7,24.0,soft orange,white
+camerupt,Fire,Ground,1.9,220.0,beige,gray
+torkoal,Fire,None,0.5,80.4,soft orange,beige
+spoink,Psychic,None,0.7,30.6,gray,gray
+grumpig,Psychic,None,0.9,71.5,soft pink,gray
+spinda,Normal,None,1.1,5.0,beige,white
+trapinch,Ground,None,0.7,15.0,beige,beige
+vibrava,Ground,Dragon,1.1,15.3,gray,gray
+flygon,Ground,Dragon,2.0,82.0,very soft green,beige
+cacnea,Grass,None,0.4,51.3,very soft green,gray
+cacturne,Grass,Dark,1.3,77.4,gray,soft orange
+swablu,Normal,Flying,0.4,1.2,very soft blue,white
+altaria,Dragon,Flying,1.1,20.6,very soft blue,white
+zangoose,Normal,None,1.3,40.3,beige,white
+seviper,Poison,None,2.7,52.5,gray,beige
+lunatone,Rock,Psychic,1.0,168.0,beige,soft orange
+solrock,Rock,Psychic,1.2,154.0,beige,soft orange
+barboach,Water,Ground,0.4,1.9,very soft blue,purple-blue
+whiscash,Water,Ground,0.9,23.6,teal,very soft blue
+corphish,Water,None,0.6,11.5,beige,soft orange
+crawdaunt,Water,Dark,1.1,32.8,gray,soft orange
+baltoy,Ground,Psychic,0.5,21.5,soft orange,gray
+claydol,Ground,Psychic,1.5,108.0,gray,beige
+lileep,Rock,Grass,1.0,23.8,beige,gray
+cradily,Rock,Grass,1.5,60.4,very soft green,soft orange
+anorith,Rock,Bug,0.7,12.5,gray,gray
+armaldo,Rock,Bug,1.5,68.2,gray,gray
+feebas,Water,None,0.6,7.4,soft orange,gray
+milotic,Water,None,6.2,162.0,beige,white
+castform,Normal,None,0.3,0.8,purple-blue,white
+kecleon,Normal,None,1.0,22.0,very soft green,soft orange
+shuppet,Ghost,None,0.6,2.3,gray,gray
+banette,Ghost,None,1.1,12.5,gray,gray
+duskull,Ghost,None,0.8,15.0,gray,gray
+dusclops,Ghost,None,1.6,30.6,gray,gray
+tropius,Grass,Flying,2.0,100.0,gray,gray
+chimecho,Psychic,None,0.6,1.0,gray,white
+absol,Dark,None,1.2,47.0,gray,white
+wynaut,Psychic,None,0.6,14.0,very soft blue,very soft blue
+snorunt,Ice,None,0.7,16.8,soft orange,black
+glalie,Ice,None,1.5,256.5,black,white
+spheal,Ice,Water,0.8,39.5,purple-blue,white
+sealeo,Ice,Water,1.1,87.6,very soft blue,white
+walrein,Ice,Water,1.4,150.6,gray,purple-blue
+clamperl,Water,None,0.4,52.5,black,very soft blue
+huntail,Water,None,1.7,27.0,very soft blue,beige
+gorebyss,Water,None,1.8,22.6,soft pink,beige
+relicanth,Water,Rock,1.0,23.4,gray,gray
+luvdisc,Water,None,0.6,8.7,beige,beige
+bagon,Dragon,None,0.6,42.1,purple-blue,white
+shelgon,Dragon,None,1.1,110.5,gray,white
+salamence,Dragon,Flying,1.5,102.6,gray,purple-blue
+beldum,Steel,Psychic,0.6,95.2,gray,gray
+metang,Steel,Psychic,1.2,202.5,gray,gray
+metagross,Steel,Psychic,1.6,550.0,purple-blue,gray
+regirock,Rock,None,1.7,230.0,beige,gray
+regice,Ice,None,1.8,175.0,very soft blue,very soft blue
+registeel,Steel,None,1.9,205.0,gray,white
+latias,Dragon,Psychic,1.4,40.0,gray,white
+latios,Dragon,Psychic,2.0,60.0,teal,purple-blue
+kyogre,Water,None,4.5,352.0,teal,very soft blue
+groudon,Ground,None,3.5,950.0,orange,black
+rayquaza,Dragon,Flying,7.0,206.5,gray,white
+jirachi,Steel,Psychic,0.3,1.1,soft orange,white
+turtwig,Grass,None,0.4,10.2,soft orange,gray
+grotle,Grass,None,1.1,97.0,gray,gray
+torterra,Grass,Ground,2.2,310.0,gray,gray
+chimchar,Fire,None,0.5,6.2,orange,soft orange
+monferno,Fire,Fighting,0.9,22.0,beige,gray
+infernape,Fire,Fighting,1.2,55.0,beige,teal
+piplup,Water,None,0.4,5.2,gray,purple-blue
+prinplup,Water,None,0.8,23.0,gray,gray
+empoleon,Water,Steel,1.7,84.5,black,white
+starly,Normal,Flying,0.3,2.0,gray,gray
+staravia,Normal,Flying,0.6,15.5,gray,gray
+staraptor,Normal,Flying,1.2,24.9,gray,gray
+bidoof,Normal,None,0.5,20.0,gray,olive
+bibarel,Normal,Water,1.0,31.5,maroon,beige
+kricketot,Bug,None,0.3,2.2,beige,soft orange
+kricketune,Bug,None,1.0,25.5,gray,beige
+shinx,Electric,None,0.5,9.5,purple-blue,black
+luxio,Electric,None,0.9,30.5,gray,gray
+luxray,Electric,None,1.4,42.0,gray,gray
+budew,Grass,Poison,0.2,1.2,soft orange,very soft green
+roserade,Grass,Poison,0.9,14.5,gray,very soft blue
+cranidos,Rock,None,0.9,31.5,gray,purple-blue
+rampardos,Rock,None,1.6,102.5,gray,black
+shieldon,Rock,Steel,0.5,57.0,gray,soft orange
+bastiodon,Rock,Steel,1.3,149.5,gray,gray
+burmy,Bug,None,0.2,3.4,gray,beige
+mothim,Bug,Flying,0.9,23.3,soft orange,beige
+combee,Bug,Flying,0.3,5.5,orange,yellow
+vespiquen,Bug,Flying,1.2,38.5,olive,orange
+pachirisu,Electric,None,0.4,3.9,very soft blue,white
+buizel,Water,None,0.7,29.5,beige,soft orange
+floatzel,Water,None,1.1,33.5,orange,soft orange
+cherubi,Grass,None,0.4,3.3,beige,teal
+cherrim,Grass,None,0.5,9.3,gray,gray
+shellos,Water,None,0.3,6.3,beige,gray
+gastrodon,Water,Ground,0.9,29.9,beige,gray
+ambipom,Normal,None,1.2,20.3,gray,beige
+drifloon,Ghost,Flying,0.4,1.2,gray,gray
+drifblim,Ghost,Flying,1.2,15.0,gray,beige
+buneary,Normal,None,0.4,5.5,gray,soft orange
+lopunny,Normal,None,1.2,33.3,soft orange,gray
+mismagius,Ghost,None,0.9,4.4,gray,white
+honchkrow,Dark,Flying,0.9,27.3,teal,black
+glameow,Normal,None,0.5,3.9,gray,gray
+purugly,Normal,None,1.0,43.8,gray,gray
+chingling,Psychic,None,0.2,0.6,soft orange,beige
+stunky,Poison,Dark,0.4,19.2,gray,white
+skuntank,Poison,Dark,1.0,38.0,gray,white
+bronzor,Steel,Psychic,0.5,60.5,teal,gray
+bronzong,Steel,Psychic,1.3,187.0,gray,gray
+bonsly,Rock,None,0.5,15.0,gray,gray
+happiny,Normal,None,0.6,24.4,beige,white
+chatot,Normal,Flying,0.5,1.9,gray,beige
+spiritomb,Ghost,Dark,1.0,108.0,beige,gray
+gible,Dragon,Ground,0.7,20.5,gray,gray
+gabite,Dragon,Ground,1.4,56.0,gray,gray
+garchomp,Dragon,Ground,1.9,95.0,gray,gray
+munchlax,Normal,None,0.6,105.0,gray,gray
+riolu,Fighting,None,0.7,20.2,gray,gray
+lucario,Fighting,Steel,1.2,54.0,gray,gray
+hippopotas,Ground,None,0.8,49.5,soft orange,gray
+hippowdon,Ground,None,2.0,300.0,gray,gray
+skorupi,Poison,Bug,0.8,12.0,gray,purple-blue
+drapion,Poison,Dark,1.3,61.5,gray,gray
+croagunk,Poison,Fighting,0.7,23.0,gray,gray
+toxicroak,Poison,Fighting,1.3,44.4,gray,gray
+carnivine,Grass,None,1.4,27.0,gray,very soft green
+finneon,Water,None,0.4,7.0,very soft blue,teal
+lumineon,Water,None,1.2,24.0,teal,very soft blue
+mantyke,Water,Flying,1.0,65.0,teal,gray
+snover,Grass,Ice,1.0,50.5,gray,gray
+abomasnow,Grass,Ice,2.2,135.5,gray,white
+weavile,Dark,Ice,1.1,34.0,beige,gray
+magnezone,Electric,Steel,1.2,180.0,gray,black
+lickilicky,Normal,None,1.7,140.0,beige,gray
+rhyperior,Ground,Rock,2.4,282.8,gray,gray
+tangrowth,Grass,None,2.0,128.6,gray,gray
+electivire,Electric,None,1.8,138.6,soft orange,black
+magmortar,Fire,None,1.6,68.0,orange,beige
+togekiss,Fairy,Flying,1.5,38.0,gray,white
+yanmega,Bug,Flying,1.9,51.5,gray,beige
+leafeon,Grass,None,1.0,25.5,very soft green,soft orange
+glaceon,Ice,None,0.8,25.9,very soft blue,gray
+gliscor,Ground,Flying,2.0,42.5,gray,purple-blue
+mamoswine,Ice,Ground,2.5,291.0,beige,olive
+porygon-z,Normal,None,0.9,34.0,gray,beige
+gallade,Psychic,Fighting,1.6,52.0,gray,soft orange
+probopass,Rock,Steel,1.4,340.0,beige,black
+dusknoir,Ghost,None,2.2,106.6,gray,gray
+froslass,Ice,Ghost,1.3,26.6,very soft blue,gray
+rotom,Electric,Ghost,0.3,0.3,very soft blue,beige
+uxie,Psychic,None,0.3,0.3,gray,soft orange
+mesprit,Psychic,None,0.3,0.3,very soft blue,beige
+azelf,Psychic,None,0.3,0.3,gray,very soft blue
+dialga,Steel,Dragon,5.4,683.0,teal,white
+palkia,Water,Dragon,4.2,336.0,gray,white
+heatran,Fire,Steel,1.7,430.0,maroon,gray
+regigigas,Normal,None,3.7,420.0,beige,gray
+cresselia,Psychic,None,1.5,85.6,beige,gray
+phione,Water,None,0.4,3.1,very soft blue,gray
+manaphy,Water,None,0.3,1.4,purple-blue,gray
+darkrai,Dark,None,1.5,50.5,black,gray
+arceus,Normal,None,3.2,320.0,gray,gray
+victini,Psychic,Fire,0.4,4.0,beige,soft orange
+snivy,Grass,None,0.6,8.1,gray,soft orange
+servine,Grass,None,0.8,16.0,gray,gray
+serperior,Grass,None,3.3,63.0,teal,very soft green
+tepig,Fire,None,0.5,9.9,beige,olive
+pignite,Fire,Fighting,1.0,55.5,gray,white
+emboar,Fire,Fighting,1.6,150.0,gray,beige
+oshawott,Water,None,0.5,5.9,gray,very soft blue
+dewott,Water,None,0.8,24.5,gray,very soft blue
+samurott,Water,None,1.5,94.6,teal,soft orange
+patrat,Normal,None,0.5,11.6,gray,soft orange
+watchog,Normal,None,1.1,27.0,maroon,yellow
+lillipup,Normal,None,0.4,4.1,soft orange,beige
+herdier,Normal,None,0.9,14.7,gray,beige
+stoutland,Normal,None,1.2,61.0,gray,white
+purrloin,Dark,None,0.4,10.1,gray,white
+liepard,Dark,None,1.1,37.5,gray,soft orange
+pansage,Grass,None,0.6,10.5,gray,gray
+simisage,Grass,None,1.1,30.5,teal,gray
+pansear,Fire,None,0.6,11.0,beige,soft orange
+simisear,Fire,None,1.0,28.0,beige,soft orange
+panpour,Water,None,0.6,13.5,very soft blue,soft orange
+simipour,Water,None,1.0,29.0,purple-blue,soft orange
+munna,Psychic,None,0.6,23.3,beige,white
+musharna,Psychic,None,1.1,60.5,gray,beige
+pidove,Normal,Flying,0.3,2.1,gray,white
+tranquill,Normal,Flying,0.6,15.0,black,white
+unfezant,Normal,Flying,1.2,29.0,gray,gray
+blitzle,Electric,None,0.8,29.8,gray,gray
+zebstrika,Electric,None,1.6,79.5,gray,black
+roggenrola,Rock,None,0.4,18.0,black,gray
+boldore,Rock,None,0.9,102.0,navy,gray
+gigalith,Rock,None,1.7,260.0,black,gray
+woobat,Psychic,Flying,0.4,2.1,black,white
+swoobat,Psychic,Flying,0.9,10.5,gray,gray
+drilbur,Ground,None,0.3,8.5,gray,gray
+excadrill,Ground,Steel,0.7,40.4,gray,white
+audino,Normal,None,1.1,31.0,beige,soft orange
+timburr,Fighting,None,0.6,12.5,soft orange,olive
+gurdurr,Fighting,None,1.2,40.0,beige,maroon
+conkeldurr,Fighting,None,1.4,87.0,gray,gray
+tympole,Water,None,0.5,4.5,soft orange,purple-blue
+palpitoad,Water,Ground,0.8,17.0,black,very soft green
+seismitoad,Water,Ground,1.5,62.0,gray,white
+throh,Fighting,None,1.3,55.5,black,white
+sawk,Fighting,None,1.4,51.0,black,gray
+sewaddle,Bug,Grass,0.3,2.5,olive,soft orange
+swadloon,Bug,Grass,0.5,7.3,green-yellow,olive
+leavanny,Bug,Grass,1.2,20.5,olive,gray
+venipede,Bug,Poison,0.4,5.3,gray,gray
+whirlipede,Bug,Poison,1.2,58.5,gray,gray
+scolipede,Bug,Poison,2.5,200.5,gray,gray
+cottonee,Grass,Fairy,0.3,0.6,gray,white
+whimsicott,Grass,Fairy,0.7,6.6,gray,white
+petilil,Grass,None,0.5,6.6,soft orange,gray
+lilligant,Grass,None,1.1,16.3,soft orange,gray
+sandile,Ground,Dark,0.7,15.2,beige,gray
+krokorok,Ground,Dark,1.0,33.4,beige,gray
+krookodile,Ground,Dark,1.5,96.3,gray,gray
+darumaka,Fire,None,0.6,37.5,beige,beige
+maractus,Grass,None,1.0,28.0,gray,teal
+dwebble,Bug,Rock,0.3,14.5,gray,beige
+crustle,Bug,Rock,1.4,200.0,gray,white
+scraggy,Dark,Fighting,0.6,11.8,beige,soft orange
+scrafty,Dark,Fighting,1.1,30.0,beige,beige
+sigilyph,Psychic,Flying,1.4,14.0,black,beige
+yamask,Ghost,None,0.5,1.5,gray,soft orange
+cofagrigus,Ghost,None,1.7,76.5,gray,soft orange
+tirtouga,Water,Rock,0.7,16.5,gray,purple-blue
+carracosta,Water,Rock,1.2,81.0,gray,purple-blue
+archen,Rock,Flying,0.5,9.5,beige,soft orange
+archeops,Rock,Flying,1.4,32.0,teal,gray
+trubbish,Poison,None,0.6,31.0,gray,gray
+garbodor,Poison,None,1.9,107.3,gray,gray
+zorua,Dark,None,0.7,12.5,gray,black
+zoroark,Dark,None,1.6,81.1,black,maroon
+minccino,Normal,None,0.4,5.8,gray,white
+cinccino,Normal,None,0.5,7.5,gray,white
+gothita,Psychic,None,0.4,5.8,soft pink,black
+gothorita,Psychic,None,0.7,18.0,black,soft pink
+gothitelle,Psychic,None,1.5,44.0,black,black
+solosis,Psychic,None,0.3,1.0,very soft green,white
+duosion,Psychic,None,0.6,8.0,very soft green,white
+reuniclus,Psychic,None,1.0,20.1,very soft green,white
+ducklett,Water,Flying,0.5,5.5,very soft blue,gray
+swanna,Water,Flying,1.3,24.2,purple-blue,white
+vanillite,Ice,None,0.4,5.7,purple-blue,white
+vanillish,Ice,None,1.1,41.0,purple-blue,very soft blue
+vanilluxe,Ice,None,1.3,57.5,very soft blue,white
+deerling,Normal,Grass,0.6,19.5,beige,black
+sawsbuck,Normal,Grass,1.9,92.5,gray,black
+emolga,Electric,Flying,0.4,5.0,gray,soft orange
+karrablast,Bug,None,0.5,5.9,beige,soft blue
+escavalier,Bug,Steel,1.0,33.0,gray,gray
+foongus,Grass,Poison,0.2,1.0,beige,gray
+amoonguss,Grass,Poison,0.6,10.5,gray,black
+frillish,Water,Ghost,1.2,33.0,very soft blue,white
+jellicent,Water,Ghost,2.2,135.0,very soft blue,white
+alomomola,Water,None,1.2,31.6,beige,gray
+joltik,Bug,Electric,0.1,0.6,soft orange,gray
+galvantula,Bug,Electric,0.8,14.3,soft orange,gray
+ferroseed,Grass,Steel,0.6,18.8,gray,white
+ferrothorn,Grass,Steel,1.0,110.0,black,white
+klink,Steel,None,0.3,21.0,gray,white
+klang,Steel,None,0.6,51.0,gray,white
+klinklang,Steel,None,0.6,81.0,gray,white
+tynamo,Electric,None,0.2,0.3,very soft blue,gray
+eelektrik,Electric,None,1.2,22.0,gray,soft orange
+eelektross,Electric,None,2.1,80.5,gray,soft orange
+elgyem,Psychic,None,0.5,9.0,very soft blue,gray
+beheeyem,Psychic,None,1.0,34.5,beige,gray
+litwick,Ghost,Fire,0.3,3.1,purple-blue,white
+lampent,Ghost,Fire,0.6,13.0,black,navy
+chandelure,Ghost,Fire,1.0,34.3,maroon,gray
+axew,Dragon,None,0.6,18.0,gray,olive
+fraxure,Dragon,None,1.0,36.0,gray,gray
+haxorus,Dragon,None,1.8,105.5,olive,gray
+cubchoo,Ice,None,0.5,8.5,purple-blue,white
+beartic,Ice,None,2.6,260.0,very soft blue,white
+cryogonal,Ice,None,1.1,148.0,gray,purple-blue
+shelmet,Bug,None,0.4,7.7,gray,white
+accelgor,Bug,None,0.8,25.3,gray,gray
+stunfisk,Ground,Electric,0.7,11.0,beige,gray
+mienfoo,Fighting,None,0.9,20.0,soft orange,gray
+mienshao,Fighting,None,1.4,35.5,purple-blue,white
+druddigon,Dragon,None,1.6,139.0,teal,purple
+golett,Ground,Ghost,1.0,92.0,gray,gray
+golurk,Ground,Ghost,2.8,330.0,gray,gray
+pawniard,Dark,Steel,0.5,10.2,gray,gray
+bisharp,Dark,Steel,1.6,70.0,maroon,gray
+bouffalant,Normal,None,1.6,94.6,gray,gray
+rufflet,Normal,Flying,0.5,10.5,gray,white
+braviary,Normal,Flying,1.5,41.0,gray,olive
+vullaby,Dark,Flying,0.5,9.0,gray,gray
+mandibuzz,Dark,Flying,1.2,39.5,gray,beige
+heatmor,Fire,None,1.4,58.0,gray,gray
+durant,Bug,Steel,0.3,33.0,gray,gray
+deino,Dark,Dragon,0.8,17.3,gray,gray
+zweilous,Dark,Dragon,1.4,50.0,gray,gray
+hydreigon,Dark,Dragon,1.8,160.0,gray,gray
+larvesta,Bug,Fire,1.1,28.8,gray,gray
+volcarona,Bug,Fire,1.6,46.0,beige,gray
+cobalion,Steel,Fighting,2.1,250.0,teal,gray
+terrakion,Rock,Fighting,1.9,260.0,gray,gray
+virizion,Grass,Fighting,2.0,200.0,very soft green,gray
+reshiram,Dragon,Fire,3.2,330.0,purple-blue,white
+zekrom,Dragon,Electric,2.9,345.0,teal,black
+kyurem,Dragon,Ice,3.0,325.0,gray,gray
+genesect,Bug,Steel,1.5,82.5,gray,gray
+chespin,Grass,None,0.4,9.0,beige,gray
+quilladin,Grass,None,0.7,29.0,maroon,beige
+chesnaught,Grass,Fighting,1.6,90.0,gray,white
+fennekin,Fire,None,0.4,9.4,soft orange,beige
+braixen,Fire,None,1.0,14.5,soft orange,beige
+delphox,Fire,Psychic,1.5,39.0,olive,beige
+froakie,Water,None,0.3,7.0,very soft blue,soft orange
+frogadier,Water,None,0.6,10.9,gray,teal
+greninja,Water,Dark,1.5,40.0,teal,navy
+bunnelby,Normal,None,0.4,5.0,gray,olive
+diggersby,Normal,Ground,1.0,42.4,gray,gray
+fletchling,Normal,Flying,0.3,1.7,beige,black
+fletchinder,Fire,Flying,0.7,16.0,black,beige
+talonflame,Fire,Flying,1.2,24.5,maroon,beige
+scatterbug,Bug,None,0.3,2.5,gray,gray
+spewpa,Bug,None,0.3,8.4,gray,beige
+vivillon,Bug,Flying,1.2,17.0,beige,beige
+litleo,Fire,Normal,0.6,13.5,gray,beige
+pyroar,Fire,Normal,1.5,81.5,beige,black
+floette,Fairy,None,0.2,0.9,gray,gray
+florges,Fairy,None,1.1,10.0,teal,beige
+skiddo,Grass,None,0.9,31.0,gray,teal
+gogoat,Grass,None,1.7,91.0,gray,gray
+pancham,Fighting,None,0.6,8.0,gray,white
+pangoro,Fighting,Dark,2.1,136.0,gray,gray
+furfrou,Normal,None,1.2,28.0,gray,white
+espurr,Psychic,None,0.3,3.5,gray,gray
+honedge,Steel,Ghost,0.8,2.0,gray,very soft blue
+doublade,Steel,Ghost,0.8,4.5,beige,gray
+spritzee,Fairy,None,0.2,0.5,beige,gray
+aromatisse,Fairy,None,0.8,15.5,gray,beige
+swirlix,Fairy,None,0.4,3.5,gray,white
+slurpuff,Fairy,None,0.8,5.0,gray,white
+inkay,Dark,Psychic,0.4,3.5,beige,purple-blue
+malamar,Dark,Psychic,1.5,47.0,gray,white
+binacle,Rock,Water,0.5,31.0,gray,white
+barbaracle,Rock,Water,1.3,96.0,gray,black
+skrelp,Poison,Water,0.5,7.3,gray,very soft blue
+dragalge,Poison,Dragon,1.8,81.5,olive,gray
+clauncher,Water,None,0.5,8.3,very soft blue,gray
+clawitzer,Water,None,1.3,35.3,teal,teal
+helioptile,Electric,Normal,0.5,6.0,soft orange,gray
+heliolisk,Electric,Normal,1.0,21.0,soft orange,gray
+tyrunt,Rock,Dragon,0.8,26.0,gray,gray
+tyrantrum,Rock,Dragon,2.5,270.0,gray,beige
+amaura,Rock,Ice,1.3,25.2,very soft blue,soft orange
+aurorus,Rock,Ice,2.7,225.0,purple-blue,white
+sylveon,Fairy,None,1.0,23.5,beige,black
+hawlucha,Fighting,Flying,0.8,21.5,gray,orange
+dedenne,Electric,Fairy,0.2,2.2,orange,white
+carbink,Rock,Fairy,0.3,5.7,gray,purple-blue
+goomy,Dragon,None,0.3,2.8,gray,white
+sliggoo,Dragon,None,0.8,17.5,gray,white
+goodra,Dragon,None,2.0,150.5,gray,white
+klefki,Steel,Fairy,0.2,3.0,gray,white
+phantump,Ghost,Grass,0.4,7.0,gray,black
+trevenant,Ghost,Grass,1.5,71.0,gray,gray
+bergmite,Ice,None,1.0,99.5,purple-blue,white
+avalugg,Ice,None,2.0,505.0,purple-blue,white
+noibat,Flying,Dragon,0.5,8.0,purple-blue,gray
+noivern,Flying,Dragon,1.5,85.0,gray,gray
+xerneas,Fairy,None,3.0,215.0,gray,beige
+yveltal,Dark,Flying,5.8,203.0,black,white
+diancie,Rock,Fairy,0.7,8.8,soft pink,gray
+volcanion,Fire,Water,1.7,195.0,maroon,beige
+rowlet,Grass,Flying,0.3,1.5,soft orange,gray
+dartrix,Grass,Flying,0.7,16.0,gray,olive
+decidueye,Grass,Ghost,1.6,36.6,gray,teal
+litten,Fire,None,0.4,4.3,gray,beige
+torracat,Fire,None,0.7,25.0,beige,gray
+incineroar,Fire,Dark,1.8,83.0,beige,olive
+popplio,Water,None,0.4,7.5,gray,gray
+brionne,Water,None,0.6,17.5,purple-blue,very soft blue
+primarina,Water,Fairy,1.8,44.0,gray,white
+pikipek,Normal,Flying,0.3,1.2,gray,gray
+trumbeak,Normal,Flying,0.6,14.8,gray,black
+toucannon,Normal,Flying,1.1,26.0,black,soft orange
+yungoos,Normal,None,0.4,6.0,beige,soft orange
+gumshoos,Normal,None,0.7,14.2,gray,soft orange
+grubbin,Bug,None,0.4,4.4,beige,soft orange
+charjabug,Bug,Electric,0.5,10.5,gray,gray
+vikavolt,Bug,Electric,1.5,45.0,teal,gray
+crabrawler,Fighting,None,0.6,7.0,teal,soft blue
+crabominable,Fighting,Ice,1.7,180.0,very soft blue,gray
+cutiefly,Bug,Fairy,0.1,0.2,beige,soft orange
+ribombee,Bug,Fairy,0.2,0.5,beige,black
+rockruff,Rock,None,0.5,9.2,beige,gray
+mareanie,Poison,Water,0.4,8.0,very soft blue,gray
+toxapex,Poison,Water,0.7,14.5,gray,very soft blue
+mudbray,Ground,None,1.0,110.0,gray,soft orange
+mudsdale,Ground,None,2.5,920.0,gray,gray
+dewpider,Water,Bug,0.3,4.0,gray,olive
+araquanid,Water,Bug,1.8,82.0,gray,white
+fomantis,Grass,None,0.3,1.5,gray,gray
+lurantis,Grass,None,0.9,18.5,beige,white
+morelull,Grass,Fairy,0.2,1.5,soft pink,white
+shiinotic,Grass,Fairy,1.0,11.5,gray,white
+salandit,Poison,Fire,0.6,4.8,maroon,gray
+salazzle,Poison,Fire,1.2,22.2,gray,gray
+stufful,Normal,Fighting,0.5,6.8,maroon,beige
+bewear,Normal,Fighting,2.1,135.0,beige,white
+bounsweet,Grass,None,0.3,3.2,very soft green,beige
+steenee,Grass,None,0.7,8.2,very soft green,gray
+tsareena,Grass,None,1.2,21.4,very soft green,gray
+comfey,Fairy,None,0.1,0.3,beige,gray
+oranguru,Normal,Psychic,1.5,76.0,gray,gray
+passimian,Fighting,None,2.0,82.8,gray,soft orange
+wimpod,Bug,Water,0.5,12.0,gray,white
+golisopod,Bug,Water,2.0,108.0,gray,white
+sandygast,Ghost,Ground,0.5,70.0,soft orange,maroon
+palossand,Ghost,Ground,1.3,250.0,soft orange,gray
+pyukumuku,Water,None,0.3,1.2,gray,beige
+silvally,Normal,None,2.3,100.5,gray,white
+komala,Normal,None,0.4,19.9,very soft blue,gray
+turtonator,Fire,Dragon,2.0,212.0,gray,soft orange
+togedemaru,Electric,Steel,0.3,3.3,black,white
+mimikyu,Ghost,Fairy,0.2,0.7,gray,soft orange
+bruxish,Water,Psychic,0.9,19.0,gray,very soft blue
+drampa,Normal,Dragon,3.0,185.0,gray,white
+dhelmise,Ghost,Grass,3.9,210.0,teal,gray
+jangmo-o,Dragon,None,0.6,29.7,gray,white
+hakamo-o,Dragon,Fighting,1.2,47.0,beige,gray
+kommo-o,Dragon,Fighting,1.6,78.2,gray,gray
+cosmog,Psychic,None,0.2,0.1,soft blue,white
+cosmoem,Psychic,None,0.1,999.9,gray,gray
+solgaleo,Psychic,Steel,3.4,230.0,gray,black
+lunala,Psychic,Ghost,4.0,120.0,purple,gray
+nihilego,Rock,Poison,1.2,55.5,purple-blue,white
+buzzwole,Bug,Fighting,2.4,333.6,beige,black
+pheromosa,Bug,Fighting,1.8,25.0,soft orange,white
+xurkitree,Electric,None,3.8,100.0,black,gray
+celesteela,Steel,Flying,9.2,999.9,gray,gray
+kartana,Grass,Steel,0.3,0.1,gray,white
+guzzlord,Dark,Dragon,5.5,888.0,gray,black
+necrozma,Psychic,None,2.4,230.0,black,black
+magearna,Steel,Fairy,1.0,80.5,gray,white
+marshadow,Fighting,Ghost,0.7,22.2,gray,black
+poipole,Poison,None,0.6,1.8,gray,purple
+naganadel,Poison,Dragon,3.6,150.0,gray,white
+stakataka,Rock,Steel,5.5,820.0,gray,gray
+blacephalon,Fire,Ghost,1.8,13.0,soft orange,gray
+zeraora,Electric,None,1.5,44.5,soft orange,gray
+meltan,Steel,None,0.2,8.0,soft orange,olive
+melmetal,Steel,None,2.5,800.0,gray,gray
+grookey,Grass,None,0.3,5.0,very soft green,gray
+thwackey,Grass,None,0.7,14.0,soft orange,olive
+rillaboom,Grass,None,2.1,90.0,gray,black
+scorbunny,Fire,None,0.3,4.5,beige,white
+raboot,Fire,None,0.6,9.0,gray,white
+cinderace,Fire,None,1.4,33.0,olive,black
+sobble,Water,None,0.3,4.0,very soft blue,gray
+drizzile,Water,None,0.7,11.5,gray,gray
+inteleon,Water,None,1.9,45.2,black,gray
+skwovet,Normal,None,0.3,2.5,gray,gray
+greedent,Normal,None,0.6,6.0,gray,gray
+rookidee,Flying,None,0.2,1.8,black,white
+corvisquire,Flying,None,0.8,16.0,black,teal
+corviknight,Flying,Steel,2.2,75.0,gray,navy
+blipbug,Bug,None,0.4,8.0,gray,beige
+dottler,Bug,Psychic,0.4,19.5,soft orange,black
+orbeetle,Bug,Psychic,0.4,40.8,gray,red
+nickit,Dark,None,0.6,8.9,olive,maroon
+thievul,Dark,None,1.2,19.9,black,olive
+gossifleur,Grass,None,0.4,2.2,soft orange,olive
+eldegoss,Grass,None,0.5,2.5,soft orange,orange
+wooloo,Normal,None,0.6,6.0,gray,white
+dubwool,Normal,None,1.3,43.0,black,gray
+chewtle,Water,None,0.3,8.5,olive,very soft blue
+drednaw,Water,Rock,1.0,115.5,gray,olive
+yamper,Electric,None,0.3,13.5,beige,soft orange
+boltund,Electric,None,1.0,34.0,gray,soft orange
+rolycoly,Rock,None,0.3,12.0,black,gray
+carkol,Rock,Fire,1.1,78.0,black,black
+coalossal,Rock,Fire,2.8,310.5,black,gray
+applin,Grass,Dragon,0.2,0.5,gray,purple
+flapple,Grass,Dragon,0.3,1.0,gray,olive
+appletun,Grass,Dragon,0.4,13.0,beige,gray
+silicobra,Ground,None,2.2,7.6,gray,gray
+sandaconda,Ground,None,3.8,65.5,olive,black
+cramorant,Flying,Water,0.8,18.0,teal,gray
+arrokuda,Water,None,0.5,1.0,gray,soft orange
+barraskewda,Water,None,1.3,30.0,gray,beige
+toxel,Electric,Poison,0.4,11.0,gray,purple-blue
+sizzlipede,Fire,Bug,0.7,1.0,maroon,white
+centiskorch,Fire,Bug,3.0,120.0,maroon,orange
+clobbopus,Fighting,None,0.6,4.0,navy,white
+grapploct,Fighting,None,1.6,39.0,black,teal
+sinistea,Ghost,None,0.1,0.2,gray,very soft blue
+polteageist,Ghost,None,0.2,0.4,very soft blue,gray
+hatenna,Psychic,None,0.4,3.4,gray,very soft blue
+hattrem,Psychic,None,0.6,4.8,very soft blue,gray
+hatterene,Psychic,Fairy,2.1,5.0,gray,white
+impidimp,Dark,Fairy,0.4,5.5,beige,gray
+morgrem,Dark,Fairy,0.8,12.5,purple,beige
+grimmsnarl,Dark,Fairy,1.5,61.0,navy,gray
+obstagoon,Dark,Normal,1.6,46.0,gray,white
+perrserker,Steel,None,0.8,28.0,gray,gray
+cursola,Ghost,None,1.0,0.4,soft pink,white
+runerigus,Ground,Ghost,1.6,66.6,gray,gray
+milcery,Fairy,None,0.2,0.3,white,white
+alcremie,Fairy,None,0.3,0.5,white,white
+falinks,Fighting,None,3.0,62.0,black,gray
+pincurchin,Electric,None,0.3,1.0,beige,white
+snom,Ice,Bug,0.3,3.8,very soft blue,white
+frosmoth,Ice,Bug,1.3,42.0,purple-blue,white
+stonjourner,Rock,None,2.5,520.0,gray,gray
+cufant,Steel,None,1.2,100.0,beige,teal
+copperajah,Steel,None,3.0,650.0,teal,black
+dracozolt,Electric,Dragon,1.8,190.0,teal,beige
+arctozolt,Electric,Ice,2.3,150.0,very soft blue,teal
+dracovish,Water,Dragon,2.3,215.0,green,gray
+arctovish,Water,Ice,2.0,175.0,very soft blue,teal
+duraludon,Steel,Dragon,1.8,40.0,gray,white
+dreepy,Dragon,Ghost,0.5,2.0,gray,very soft green
+drakloak,Dragon,Ghost,1.4,11.0,gray,gray
+dragapult,Dragon,Ghost,3.0,50.0,very soft blue,gray
+eternatus,Poison,Dragon,20.0,950.0,navy,pink
+kubfu,Fighting,None,0.6,12.0,beige,gray
+zarude,Dark,Grass,1.8,70.0,black,gray
+regieleki,Electric,None,1.2,145.0,soft orange,soft orange
+regidrago,Dragon,None,2.1,200.0,gray,black
+glastrier,Ice,None,2.2,800.0,very soft blue,purple-blue
+spectrier,Ghost,None,2.0,44.5,black,white
