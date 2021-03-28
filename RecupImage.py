@@ -40,7 +40,7 @@ def getURLImg():
 #fonction qui permet de créer un dossier(si il n'existe pas) et d'y stocker toutes les images
 def saveImg(listeimg, nbreImages):
 
-    shutil.rmtree('images') #permet de détruire automatiquement le fichier des images
+    #shutil.rmtree('images') #permet de détruire automatiquement le fichier des images
 
     try:                    
             os.mkdir('images')

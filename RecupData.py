@@ -54,6 +54,8 @@ def getData(nbreImages):
 
 def RecupData(nbreImages):
     getData(nbreImages)
+    print("done")
+
 if __name__ == "__main__":
     RecupData(nbreImages=100)
 

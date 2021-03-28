@@ -1,8 +1,7 @@
 from os import listdir
 from PIL import Image
 import numpy
-import math
-import matplotlib.pyplot as plot
+
 from sklearn.cluster import KMeans
 
 import csv
