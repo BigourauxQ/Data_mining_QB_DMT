@@ -57,7 +57,7 @@ def ImagePropose():
             else:
                 self.master.destroy()
 
-    Analyse_de_donnees.Analyse_de_donnees()#genere le fichier csv contenant les recommendation pour l'utilisateur
+    Analyse_de_donnees.Analyse_de_donnees()#genere le fichier csv contenant les recommendation pour l'utilisateur courant 
 
     pokemon_name = pd.read_csv("./Data_recommander_pour_utilisateur.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
     pokemon_name = pokemon_name['pokemon_selection']
@@ -95,6 +95,7 @@ def ImagePropose():
 
     PagePrincipale.PagePrincipale()
 
-
+# Permet de tester ImagePropose seul
+# Attention, le programme à besoin de certain csv pour fonctionner 
 if __name__ == "__main__":
     ImagePropose()
