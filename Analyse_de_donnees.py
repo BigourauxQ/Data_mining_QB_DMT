@@ -23,24 +23,10 @@ import pandas as pd
 import random
 import matplotlib.pyplot as plot
 
-#plot.show()
-
-### Utilisateur qui 'like' tous les 'bug'
 
 
-Data = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
-Data_image = pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
 
 
-Data2 = pd.read_csv("./DataPokemon.csv", encoding = "UTF -8")#on récupère les données sur les pokemons
-Data2 =  Data2.set_index('Name')
-Data_image =  Data_image.set_index('Name')
-Data2 = pd.concat([Data2 , Data_image], axis = 1)# permet de concaténer des données
-print(Data2)
-
-pokemon_name = Data['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
-pokemon_type = Data['Type'][0:50] #on prend les 50 premieres ligne de la colonne type
-pokemon_height = Data['height'][0:50]
 
 # l'utilisateur 1 like et dislike aléatoirement, la fonction retourne la liste d'element liké
 
@@ -131,25 +117,58 @@ def recommandation(tableau_de_like):
 
         return Proposition
 
+def Analyse_de_donnees():
+
+        Data = pd.read_csv("./Data_like_dislike_utilisateur.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+        Data = Data.set_index('like_and_dislike')# met la colonne dislike and like index
+        Data = Data.drop(['dislike'])#enlèe ce qui possède une colonne dislike
+        Data = Data.values.tolist()# transforme le tableau pandas en list
+        
+        tableau_des_pokemon = pd.read_csv("./DataTotal.csv", encoding = "ISO-8859-1")
+        tableau_des_pokemon = tableau_des_pokemon.values.tolist()
+        
+        Aime = [] # contient ce que l'utilisateur aime et peu aimer
+        Proposition = [] # contient uniquement les images recommandées
+
+        # cherche des pokémons dans la grande liste ayant des caractéristiques similaires a cceux liké (taille, poids similaire, type identique)
+        for i in Data:
+                for j in tableau_des_pokemon:
+                        if ((i[1] == j[1])and ((j[3]-1)<i[3]< (j[3]+1)) and ((j[4]-30)<i[4]< (j[4]+30))):
+                        # if (type == type and  <height< and <poids< and couleur == couleur) 
+                                Aime.append(j)
+                                
+        for i in range(len(Aime) ): # on enlève tous les premier pokémon de la liste car ce sont ceux tester par l'utilisateur
+                if i > len(Data):
+                        Proposition.append(Aime[i][0])
+
+   
+        dataframe_proposition = pd.DataFrame(Proposition,columns=['pokemon_selection'])# création dataframe contenant les propositions pour l'utilisateur
+        dataframe_proposition.to_csv('Data_recommander_pour_utilisateur.csv', index=False)   #On écrit tout ca dans un nouveau CSV
+        
+
 ###Main###
+""" if __name__ == "__main__":
 
-dataframe_like = Utilisateur3() # on choisie quelle utilisateur remplira notre tableau de like and dislike
-print(dataframe_like)
-
-tableau_de_like_U1 = dataframe_like.values.tolist()# transforme le tableau pandas en list 
-tableau_des_pokemon = Data.values.tolist() 
+        Data = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+        Data_image = pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
 
 
-recommandation(tableau_de_like_U1)
+        Data2 = pd.read_csv("./DataPokemon.csv", encoding = "UTF -8")#on récupère les données sur les pokemons
+        Data2 =  Data2.set_index('Name')
+        Data_image =  Data_image.set_index('Name')
+        Data2 = pd.concat([Data2 , Data_image], axis = 1)# permet de concaténer des données
+        print(Data2)
+
+        pokemon_name = Data['Name'][0:50] # on prend les 50 premières ligne de la colonne Name 
+        pokemon_type = Data['Type'][0:50] #on prend les 50 premieres ligne de la colonne type
+        pokemon_height = Data['height'][0:50]
+
+        dataframe_like = Utilisateur3() # on choisie quelle utilisateur remplira notre tableau de like and dislike
+        print(dataframe_like)
+
+        tableau_de_like_U1 = dataframe_like.values.tolist()# transforme le tableau pandas en list 
+        tableau_des_pokemon = Data.values.tolist() 
 
 
-"""
-
-grouped = dataframe_trois.groupby(['Type','like_and_dislike']).count()
-groupedplot = grouped.plot(x=0,kind='bar',title="like and dislike per type ")# graphe avec  le nombre de like et de dislike par type de pokemon
-
-#print(grouped)
-
-plot.gca().xaxis.set_tick_params(labelsize = 5) # change la taille des labels en x
-#plot.show()
-"""
+        recommandation(tableau_de_like_U1) """
+Analyse_de_donnees()

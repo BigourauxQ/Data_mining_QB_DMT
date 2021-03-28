@@ -4,6 +4,7 @@ import pandas as pd
 
 
 def JoinData():
+    
     Data1 = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1") #on récupère les données sur les pokemons
     Data2= pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
     Data1["Pokemon Name"]=Data1["Name"]

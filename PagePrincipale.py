@@ -10,6 +10,8 @@ import couleurDominante
 import AffichageDonnees
 import Statistiques
 import JoinData
+import TestPref
+import ImagePropose
 
 class Window(Frame):
     def __init__(self, master=None):
@@ -54,15 +56,23 @@ class Window(Frame):
 
 
 
-        BoutonTestPref=Button(self.master, fg ='orange' , height=2, text="Faire le test de preferences", command=lambda:self.TestPref())
+        BoutonTestPref=Button(self.master, fg ='orange' , height=2, text="Faire le test de preferences", command=lambda:self.Testpref())
         BoutonTestPref.grid(row=2, column=0, padx=10,pady = 15)
 
+        BoutonTestPref=Button(self.master, fg ='purple' , height=2, text="image proposé", command=lambda:self.Imagepropose())
+        BoutonTestPref.grid(row=4, column=0, padx=10,pady = 15)
     
-    def TestPref(self):
-        #Appel de la fct de like/dislikes
-        BoutonImages=Button(self.master, fg ='blue' , height=2, text="Photos proposees par l'IA", command=lambda:self.TestPref())
-        BoutonImages.grid(row=4, column=0, padx=10,pady = 15)
+    def Testpref(self):
+        """lance la phase de like and dislike
+        """
+        self.master.destroy()
+        TestPref.TestPref()
         
+    def Imagepropose(self):
+        """lance la phase de like and dislike
+        """
+        self.master.destroy()
+        ImagePropose.ImagePropose()
 
 
 
