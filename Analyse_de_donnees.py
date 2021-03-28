@@ -118,8 +118,14 @@ def recommandation(tableau_de_like):
         return Proposition
 
 def Analyse_de_donnees():
+        """fonction utilisé par ImagePropose.py afin de crée sa liste de pokémon à proposer
+        """
+        #récupère l'utilisateur actuel
+        utilisateur = pd.read_csv("./UserCourant.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+        utilisateur = utilisateur.values.tolist()
+        utilisateur = utilisateur[0][0] # utilisateur actuelle
 
-        Data = pd.read_csv("./Data_like_dislike_utilisateur.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+        Data = pd.read_csv("./Data_like_dislike_"+utilisateur+".csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
         Data = Data.set_index('like_and_dislike')# met la colonne dislike and like index
         Data = Data.drop(['dislike'])#enlèe ce qui possède une colonne dislike
         Data = Data.values.tolist()# transforme le tableau pandas en list
@@ -135,11 +141,13 @@ def Analyse_de_donnees():
                 for j in tableau_des_pokemon:
                         if ((i[1] == j[1])and ((j[3]-1)<i[3]< (j[3]+1)) and ((j[4]-30)<i[4]< (j[4]+30))):
                         # if (type == type and  <height< and <poids< and couleur == couleur) 
+                                
                                 Aime.append(j)
                                 
-        for i in range(len(Aime) ): # on enlève tous les premier pokémon de la liste car ce sont ceux tester par l'utilisateur
-                if i > len(Data):
+        for i in range(len(Aime) ): 
+                if (Aime[i][0] not in Proposition):# pour éviter les redondance on met une fois chaque pokémon jugé aimé 
                         Proposition.append(Aime[i][0])
+        
 
    
         dataframe_proposition = pd.DataFrame(Proposition,columns=['pokemon_selection'])# création dataframe contenant les propositions pour l'utilisateur
@@ -147,7 +155,7 @@ def Analyse_de_donnees():
         
 
 ###Main###
-""" if __name__ == "__main__":
+if __name__ == "__main__":
 
         Data = pd.read_csv("./DataPokemon.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
         Data_image = pd.read_csv("./DataCouleur.csv", encoding = "ISO-8859-1")
@@ -170,5 +178,5 @@ def Analyse_de_donnees():
         tableau_des_pokemon = Data.values.tolist() 
 
 
-        recommandation(tableau_de_like_U1) """
-Analyse_de_donnees()
+        recommandation(tableau_de_like_U1) 
+
