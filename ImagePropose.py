@@ -6,7 +6,14 @@ import tkinter as tk
 import PagePrincipale
 import Analyse_de_donnees
 from PIL import Image, ImageTk 
+from bs4 import BeautifulSoup
+import os
+import shutil #pip2 install shutil
+from os.path  import basename
+from urllib.request import Request, urlopen #pip3 install urllib3
+from PIL import Image #pip3 install pillow
 
+import requests;
 
 def ImagePropose():
 
@@ -37,6 +44,13 @@ def ImagePropose():
                 #paramètre de la fenêtre 
                 fenetre.title("pokémon")
                 fenetre.geometry("1080x720")
+                   
+                # on télécharges l'image que l'on veut montrer
+                f = open('images/'+pokemon_name[i]+'.jpg','wb')
+                f.write(requests.get('https://img.pokemondb.net/artwork/large/'+pokemon_name[i]+'.jpg').content)
+                im=Image.open('images/'+pokemon_name[i]+'.jpg')
+                _, ext = os.path.splitext('images/'+pokemon_name[i]+'.jpg')  #On renomme correctement nos images
+                f.close()
                 
                 name = pokemon_name[i]
                 i+=1
@@ -73,6 +87,19 @@ def ImagePropose():
     #paramètre de la fenêtre 
     fenetre.title("Pokémon")
     fenetre.geometry("1080x720")
+
+    # on crée le dossier de stockage des images
+    try:                    
+            os.mkdir('images')
+    except FileExistsError:
+            print("fichier déjà créé")
+    
+    # on télécharges l'image que l'on veut montrer
+    f = open('images/'+pokemon_name[i]+'.jpg','wb')
+    f.write(requests.get('https://img.pokemondb.net/artwork/large/'+pokemon_name[i]+'.jpg').content)
+    im=Image.open('images/'+pokemon_name[i]+'.jpg')
+    _, ext = os.path.splitext('images/'+pokemon_name[i]+'.jpg')  #On renomme correctement nos images
+    f.close()
     
     image = Image.open('./images/'+pokemon_name[i]+'.jpg')
 
