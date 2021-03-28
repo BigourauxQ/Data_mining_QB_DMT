@@ -4,13 +4,3 @@ Id,Name,Type1,Type2,height,poids
 003,venusaur,Grass,Poison,2.0,100.0
 004,charmander,Fire,None,0.6,8.5
 005,charmeleon,Fire,None,1.1,19.0
-006,charizard,Fire,Flying,1.7,90.5
-007,squirtle,Water,None,0.5,9.0
-008,wartortle,Water,None,1.0,22.5
-009,blastoise,Water,None,1.6,85.5
-010,caterpie,Bug,None,0.3,2.9
-011,metapod,Bug,None,0.7,9.9
-012,butterfree,Bug,Flying,1.1,32.0
-013,weedle,Bug,Poison,0.3,3.2
-014,kakuna,Bug,Poison,0.6,10.0
-015,beedrill,Bug,Poison,1.0,29.5
