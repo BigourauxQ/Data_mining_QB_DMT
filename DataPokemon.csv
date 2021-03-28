@@ -1,2 +1,7 @@
 Id,Name,Type1,Type2,height,poids
 001,bulbasaur,Grass,Poison,0.7,6.9
+002,ivysaur,Grass,Poison,1.0,13.0
+003,venusaur,Grass,Poison,2.0,100.0
+004,charmander,Fire,None,0.6,8.5
+005,charmeleon,Fire,None,1.1,19.0
+

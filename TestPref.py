@@ -18,11 +18,11 @@ def TestPref():
             
             #bouton de Like
             BoutonValider=Button(self.master, fg ='green' ,width=12, height=2, text="Like", command=lambda:self.like())
-            BoutonValider.pack(side=RIGHT, fill='both')
+            BoutonValider.pack(side=RIGHT, fill='both', padx=50, pady=20)
 
             #bouton de dislike
             BoutonValider=Button(self.master, fg ='red' ,width=12, height=2, text="Dislike", command=lambda:self.dislike())
-            BoutonValider.pack(side=LEFT, fill='both')
+            BoutonValider.pack(side=LEFT, fill='both', padx=50, pady=20)
 
 
         def like(self):
