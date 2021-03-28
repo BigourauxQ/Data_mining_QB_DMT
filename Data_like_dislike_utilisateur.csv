@@ -3,21 +3,3 @@ like,bulbasaur,Grass,Poison,0.7,6.9,very soft green,gray
 like,ivysaur,Grass,Poison,1.0,13.0,gray,gray
 like,venusaur,Grass,Poison,2.0,100.0,gray,beige
 dislike,charmander,Fire,None,0.6,8.5,beige,gray
-dislike,charmeleon,Fire,None,1.1,19.0,beige,orange
-dislike,charizard,Fire,Flying,1.7,90.5,beige,teal
-dislike,squirtle,Water,None,0.5,9.0,gray,very soft blue
-dislike,wartortle,Water,None,1.0,22.5,very soft blue,purple-blue
-dislike,blastoise,Water,None,1.6,85.5,gray,gray
-like,caterpie,Bug,None,0.3,2.9,gray,soft orange
-like,metapod,Bug,None,0.7,9.9,gray,very soft green
-dislike,butterfree,Bug,Flying,1.1,32.0,gray,black
-dislike,weedle,Bug,Poison,0.3,3.2,gray,beige
-dislike,kakuna,Bug,Poison,0.6,10.0,beige,soft orange
-dislike,beedrill,Bug,Poison,1.0,29.5,beige,white
-dislike,pidgey,Normal,Flying,0.3,1.8,beige,olive
-dislike,pidgeotto,Normal,Flying,1.1,30.0,beige,soft orange
-dislike,pidgeot,Normal,Flying,1.5,39.5,soft orange,gray
-dislike,rattata,Normal,None,0.3,3.5,gray,gray
-dislike,raticate,Normal,None,0.7,18.5,olive,beige
-dislike,spearow,Normal,Flying,0.3,2.0,gray,soft orange
-dislike,fearow,Normal,Flying,1.2,38.0,beige,soft orange

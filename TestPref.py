@@ -146,10 +146,12 @@ def TestPref():
     fenetre.mainloop()
 
     # crée un fichier csv avec les likes et dislikes de l'utilisateur sur un échantillon 
-
+    utilisateur = pd.read_csv("./UserCourant.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
+    utilisateur = utilisateur.values.tolist()
+    utilisateur = utilisateur[0][0] # utilisateur actuelle
     dataframe_un = pd.DataFrame(choix_de_utilisateur,columns=['like_and_dislike'])# création dataframe contenant les likes et dislikes de l'utilisateur
     dataframe_deux = pd.concat([dataframe_un , Data], axis = 1)# permet de concaténer des données
-    dataframe_deux.to_csv('Data_like_dislike_utilisateur.csv', index=False)   #On écrit tout ca dans un nouveau CSV
+    dataframe_deux.to_csv('Data_like_dislike_'+utilisateur+'.csv', index=False)   #On écrit tout ca dans un nouveau CSV
 
 
     PagePrincipale.PagePrincipale()
