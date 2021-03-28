@@ -12,7 +12,7 @@
 #support
 
 from sklearn import tree
-import pandas as pd
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import graphviz
