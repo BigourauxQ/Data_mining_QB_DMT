@@ -9,3 +9,8 @@ squirtle,Water,None,0.5,9.0,gray,very soft blue
 wartortle,Water,None,1.0,22.5,very soft blue,purple-blue
 blastoise,Water,None,1.6,85.5,gray,gray
 caterpie,Bug,None,0.3,2.9,gray,soft orange
+metapod,Bug,None,0.7,9.9,gray,very soft green
+butterfree,Bug,Flying,1.1,32.0,gray,black
+weedle,Bug,Poison,0.3,3.2,gray,beige
+kakuna,Bug,Poison,0.6,10.0,beige,soft orange
+beedrill,Bug,Poison,1.0,29.5,beige,white

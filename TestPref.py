@@ -47,7 +47,7 @@ def TestPref():
                 name = pokemon_name[i]
                 i+=1
 
-                image = Image.open('./Images2/'+name+'.jpg')
+                image = Image.open('./images/'+name+'.jpg')
                 image2 =image.resize((int(image.width/1.5),int(image.height/1.5)))
                 # Remplace PhotoImage de Tkinter par celui de PIL
                 photo = ImageTk.PhotoImage(image2)
@@ -87,7 +87,7 @@ def TestPref():
                 name = pokemon_name[i]
                 i+=1
                 
-                image = Image.open('./Images2/'+name+'.jpg')
+                image = Image.open('./images/'+name+'.jpg')
 
                 image2 =image.resize((int(image.width/1.5),int(image.height/1.5)))
                 # Remplace PhotoImage de Tkinter par celui de PIL
@@ -124,7 +124,7 @@ def TestPref():
     fenetre.title("Like/dislike")
     fenetre.geometry("1080x720")
     
-    image = Image.open('./Images2/'+pokemon_name[i]+'.jpg')
+    image = Image.open('./images/'+pokemon_name[i]+'.jpg')
     i+=1 # incrémenté pour passer a l'image suivante
 
     image2 =image.resize((int(image.width/1.5),int(image.height/1.5)))
