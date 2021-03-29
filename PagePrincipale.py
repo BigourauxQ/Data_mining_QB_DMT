@@ -8,6 +8,7 @@ import RecupImage
 import RecupData
 import couleurDominante
 import AffichageDonnees
+import AffichageDonneesperso
 import Statistiques
 import JoinData
 import TestPref
@@ -51,7 +52,7 @@ class Window(Frame):
         BoutonStats=Button(self.master, fg ='purple' , height=2, text="Afficher les stats", command=lambda:Statistiques.Statistiques())
         BoutonStats.grid(row=3, column=1, padx=10,pady = 15, sticky='w')
 
-        BoutonAffichagePerso=Button(self.master, fg ='orange' , height=2, text="Afficher les donnees perso", command=lambda:AffichageDonnees.AffichageDonnees())
+        BoutonAffichagePerso=Button(self.master, fg ='orange' , height=2, text="Afficher les donnees perso", command=lambda:AffichageDonneesperso.AffichageDonneesperso())
         BoutonAffichagePerso.grid(row=2, column=1, padx=10,pady = 15)
 
 
