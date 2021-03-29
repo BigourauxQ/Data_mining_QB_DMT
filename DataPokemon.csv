@@ -9,8 +9,3 @@ Id,Name,Type1,Type2,height,poids
 008,wartortle,Water,None,1.0,22.5
 009,blastoise,Water,None,1.6,85.5
 010,caterpie,Bug,None,0.3,2.9
-011,metapod,Bug,None,0.7,9.9
-012,butterfree,Bug,Flying,1.1,32.0
-013,weedle,Bug,Poison,0.3,3.2
-014,kakuna,Bug,Poison,0.6,10.0
-015,beedrill,Bug,Poison,1.0,29.5
