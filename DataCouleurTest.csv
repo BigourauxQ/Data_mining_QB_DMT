@@ -1,11 +1,11 @@
 Name,couleur1,couleur2
-charmeleon,beige,orange
-venusaur,gray,beige
-caterpie,gray,soft orange
 blastoise,gray,gray
-bulbasaur,gray,very soft green
+bulbasaur,very soft green,gray
+caterpie,gray,soft orange
 charizard,beige,teal
 charmander,beige,gray
-wartortle,very soft blue,purple-blue
+charmeleon,beige,orange
 ivysaur,gray,gray
 squirtle,gray,very soft blue
+venusaur,gray,beige
+wartortle,very soft blue,purple-blue

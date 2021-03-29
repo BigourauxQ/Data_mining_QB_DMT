@@ -3,7 +3,7 @@
 import pandas as pd
 from tkinter import *
 import tkinter as tk
-import PagePrincipale
+
 import Analyse_de_donnees
 from PIL import Image, ImageTk 
 from bs4 import BeautifulSoup
@@ -58,7 +58,7 @@ def ImagePropose():
                 image2 =image.resize((int(image.width/1.5),int(image.height/1.5)))
 
                 # Remplace PhotoImage de Tkinter par celui de PIL
-                photo = ImageTk.PhotoImage(image2)
+                photo = ImageTk.PhotoImage(master=fenetre, image=image2)
 
                 canvas = tk.Canvas(fenetre, width=photo.width(), height=photo.height())
                 canvas.create_image(540,360,anchor='center',image=photo)
@@ -75,7 +75,7 @@ def ImagePropose():
 
     pokemon_name = pd.read_csv("./Data_recommander_pour_utilisateur.csv", encoding = "ISO-8859-1")#on récupère les données sur les pokemons
     pokemon_name = pokemon_name['pokemon_selection']
-    print(pokemon_name)
+    #print(pokemon_name)
 
 
     #variable utiliser pour balayer les différentes images
@@ -107,7 +107,7 @@ def ImagePropose():
 
     image2 =image.resize((int(image.width/1.5),int(image.height/1.5)))
     # Remplace PhotoImage de Tkinter par celui de PIL
-    photo = ImageTk.PhotoImage(image2)
+    photo = ImageTk.PhotoImage(master=fenetre, image=image2)
 
     #label = tk.Label(fenetre, image=photo)
     #label.pack()
@@ -120,7 +120,7 @@ def ImagePropose():
     # affichage
     fenetre.mainloop()
 
-    PagePrincipale.PagePrincipale()
+    
 
 # Permet de tester ImagePropose seul
 # Attention, le programme à besoin de certain csv pour fonctionner 
