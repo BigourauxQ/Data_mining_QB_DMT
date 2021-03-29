@@ -11,14 +11,7 @@
 
 #support
 
-from sklearn import tree
-
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-import graphviz
-import pydotplus
 import numpy as np 
-from IPython.display import Image, display
 import pandas as pd
 import random
 import matplotlib.pyplot as plot

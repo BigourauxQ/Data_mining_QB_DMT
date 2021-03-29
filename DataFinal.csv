@@ -1,2 +1,11 @@
 Pokemon Name,Type1,Type2,height,poids,couleur1,couleur2
 bulbasaur,Grass,Poison,0.7,6.9,very soft green,gray
+ivysaur,Grass,Poison,1.0,13.0,gray,gray
+venusaur,Grass,Poison,2.0,100.0,gray,beige
+charmander,Fire,None,0.6,8.5,beige,gray
+charmeleon,Fire,None,1.1,19.0,beige,orange
+charizard,Fire,Flying,1.7,90.5,beige,teal
+squirtle,Water,None,0.5,9.0,gray,very soft blue
+wartortle,Water,None,1.0,22.5,very soft blue,purple-blue
+blastoise,Water,None,1.6,85.5,gray,gray
+caterpie,Bug,None,0.3,2.9,gray,soft orange
